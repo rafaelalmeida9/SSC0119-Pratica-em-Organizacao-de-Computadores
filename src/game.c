@@ -35,7 +35,7 @@ char game = 1;
 char board[6][7];
 char row, player = '0';
 
-void outchar_ij(int i, int j, char char_code) {
+void outchar_ij(int i, int j, int char_code) {
     int pos = (i + OFFSET_Y) * SCREEN_WIDTH_RES + (j + OFFSET_X);
     outchar(char_code, pos);
 }
@@ -43,7 +43,7 @@ void outchar_ij(int i, int j, char char_code) {
 void display_board() {
     for (int i = 0; i < 6; i++) {
         for (int j = 0; j < 7; j++) {
-            uint16_t color = YELLOW;
+            uint16_t color = WHITE;
             if (board[i][j] == '1') {
                 color = YELLOW;
             } else if (board[i][j] == '0') {
