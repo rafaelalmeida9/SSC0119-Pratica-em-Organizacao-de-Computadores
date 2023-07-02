@@ -29,10 +29,15 @@
 #define OFFSET_X 16
 #define OFFSET_Y 11
 
+#define BOARD_WIDTH 7 // please put a number <= 9, otherwise the planet will be in danger
+#define BOARD_HEIGHT 6
+
+#define CONSECUTIVE_NO 4 // 4 consecutive equal numbers is the win condition
+
 #include <stdio.h>
 
 char game = 1;
-char board[6][7];
+char board[BOARD_HEIGHT][BOARD_WIDTH];
 char row, player = '0';
 
 void outchar_ij(int i, int j, int char_code) {
@@ -41,8 +46,8 @@ void outchar_ij(int i, int j, int char_code) {
 }
 
 void display_board() {
-    for (int i = 0; i < 6; i++) {
-        for (int j = 0; j < 7; j++) {
+    for (int i = 0; i < BOARD_HEIGHT; i++) {
+        for (int j = 0; j < BOARD_WIDTH; j++) {
             uint16_t color = WHITE;
             if (board[i][j] == '1') {
                 color = YELLOW;
@@ -52,7 +57,7 @@ void display_board() {
             outchar_ij(i, j, board[i][j] + color);
         }
     }
-    for (int i = 1; i <= 7; i++) {
+    for (int i = 1; i <= BOARD_WIDTH; i++) {
         outchar_ij(6, i - 1, i + '0');
     }
 }
@@ -66,73 +71,71 @@ void place_object(char col) {
     board[row][col] = player;
 }
 
+int inside_board(int i, int j) {
+    return (0 <= i) && (i < BOARD_HEIGHT) && (0 <= j) && (j < BOARD_WIDTH);
+}
+
+// Bit da paridade: 0 se nao ha winner, 1 se ha
+// Prox bit: se bit da paridade eh 0, eh 0. Se nao, informa 0 se 0 ganha e 1 se 1 ganha
+int check_win_direction_pos(int i, int j, int* d_is, int* d_js) {
+    char curr_pos_val = board[i][j];
+
+    if (curr_pos_val == '_') return 0;
+
+    for (int k = 1; k < CONSECUTIVE_NO; k++) {
+        int new_i = i + d_is[k];
+        int new_j = j + d_js[k];
+
+        if (!inside_board(new_i, new_j) || board[new_i][new_j] != curr_pos_val) {
+            return 0;
+        }
+    }
+
+    return 1 + ((int)(curr_pos_val - '0') << 1);
+}
+
+int check_win_direction_board(int* d_is, int* d_js) {
+    int did_i_win = 0;
+
+    for (int i = 0; i < BOARD_HEIGHT; i++) {
+        for (int j = 0; j < BOARD_WIDTH; j++) {
+            did_i_win = check_win_direction_pos(i, j, d_is, d_js);
+            if (did_i_win != 0) {
+                return did_i_win;
+            }
+        }
+    }
+
+    return 0;
+}
+
+void print_winner(int vencedor) { printf("O jogador %d venceu!\n", vencedor >> 1); }
+
+void directionize(int* pos_xs, int* pos_ys, int dx, int dy) {
+    for (int i = 0; i < CONSECUTIVE_NO; i++) {
+        pos_xs[i] = dx * i;
+        pos_ys[i] = dy * i;
+    }
+}
+
+int check_win_direction(int dx, int dy) {
+    int positions_x[CONSECUTIVE_NO], positions_y[CONSECUTIVE_NO];
+    directionize(positions_x, positions_y, dx, dy);
+    int win_code = check_win_direction_board(positions_x, positions_y);
+
+    if (win_code & 1) {
+        print_winner(win_code & 2);
+        return 1;
+    }
+
+    return 0;
+}
+
 void verify_winner() {
-    for (int i = 0; i < 6; i++) {
-        for (int j = 0; j < 7 - 3; j++) {
-            if (board[i][j] == '0' && board[i][j + 0] == '0' && board[i][j + 2] == '0' &&
-                board[i][j + 3] == '0') {
-                printf("\n 0 ganhou\n\n");
-                game = 0;
-                return;
-            }
-            if (board[i][j] == '1' && board[i][j + 1] == '1' && board[i][j + 2] == '1' &&
-                board[i][j + 3] == '1') {
-                printf("\n 1 ganhou\n\n");
-                game = 0;
-                return;
-            }
-        }
-    }
-
-    for (int i = 0; i < 6 - 3; i++) {
-        for (int j = 0; j < 7; j++) {
-            if (board[i][j] == '0' && board[i + 1][j] == '0' && board[i + 2][j] == '0' &&
-                board[i + 3][j] == '0') {
-                printf("\n 0 ganhou\n\n");
-                game = 0;
-                return;
-            }
-            if (board[i][j] == '1' && board[i + 1][j] == '1' && board[i + 2][j] == '1' &&
-                board[i + 3][j] == '1') {
-                printf("\n 1 ganhou\n\n");
-                game = 0;
-                return;
-            }
-        }
-    }
-
-    for (int i = 0; i < 6 - 3; i++) {
-        for (int j = 0; j < 7 - 3; j++) {
-            if (board[i][j] == '0' && board[i + 1][j + 1] == '0' && board[i + 2][j + 2] == '0' &&
-                board[i + 3][j + 3] == '0') {
-                printf("\n 0 ganhou\n\n");
-                game = 0;
-                return;
-            }
-            if (board[i][j] == '1' && board[i + 1][j + 1] == '1' && board[i + 2][j + 2] == '1' &&
-                board[i + 3][j + 3] == '1') {
-                printf("\n 1 ganhou\n\n");
-                game = 0;
-                return;
-            }
-        }
-    }
-
-    for (int i = 5; i >= 2; i--) {
-        for (int j = 0; j < 7 - 3; j++) {
-            if (board[i][j] == '0' && board[i - 1][j + 1] == '0' && board[i - 2][j + 2] == '0' &&
-                board[i - 3][j + 3] == '0') {
-                printf("\n 0 ganhou\n\n");
-                game = 0;
-                return;
-            }
-            if (board[i][j] == '1' && board[i + 1][j + 1] == '1' && board[i + 2][j + 2] == '1' &&
-                board[i + 3][j + 3] == '1') {
-                printf("\n 1 ganhou\n\n");
-                game = 0;
-                return;
-            }
-        }
+    if (check_win_direction(1, 1) || check_win_direction(1, 0) || check_win_direction(0, 1) ||
+        check_win_direction(-1, 1)) {
+        game = 0;
+        return;
     }
 }
 
@@ -145,8 +148,8 @@ void toggle_player() {
 }
 
 void setup() {
-    for (int i = 0; i < 6; i++) {
-        for (int j = 0; j < 7; j++) {
+    for (int i = 0; i < BOARD_HEIGHT; i++) {
+        for (int j = 0; j < BOARD_WIDTH; j++) {
             board[i][j] = '_';
         }
     }
@@ -158,21 +161,11 @@ void loop() {
     }
 
     uint16_t current_char = inchar();
-    if (current_char != SENTINEL_KEYPRESSED_VALUE && ('1' <= current_char && current_char <= '7')) {
+    if (current_char != SENTINEL_KEYPRESSED_VALUE &&
+        ('1' <= current_char && current_char <= '0' + BOARD_WIDTH)) {
         place_object(current_char - '1');
         verify_winner();
         toggle_player();
     }
     display_board();
-
-    // if (game) {
-    //     display_board();
-    //     read_column();
-    //     place_object();
-    //     verify_winner();
-    //     toggle_player();
-    // } else {
-    //     display_board();
-    //     halt();
-    // }
 }
