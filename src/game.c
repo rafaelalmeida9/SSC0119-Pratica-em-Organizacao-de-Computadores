@@ -26,152 +26,8 @@
 #define KEYBOARD_PLUS 61
 #define KEYBOARD_ENTER 13
 
-// #define WORD_LEN 5
-// #define WORD_MEM_LEN (WORD_LEN + 1)
-// #define LAST_CHAR_IDX (WORD_LEN - 1)
-
-// #define WORDS_Y_GAP 1
-// #define PLACEHOLDER_CHARACTER_INDEX 31
-
-// #define COLOR_FOR_CURSOR LIME
-// #define COLOR_FOR_NOT_PRESENT_LETTER RED
-// #define COLOR_FOR_PRESENT_LETTER YELLOW
-// #define COLOR_FOR_RIGHT_LETTER GREEN
-
-// #define MAX_N_WORDS 2
-
-// char game_words[MAX_N_WORDS][WORD_MEM_LEN] = {"falso", "gerar"};
-// char input_word[WORD_MEM_LEN] = {};
-// uint16_t solved[MAX_N_WORDS] = {};
-// uint16_t n_words = 0;
-// uint16_t current_cursor_index = 0;
-// uint16_t current_line_index = 4;
-
-// void decrement_cursor() {
-//     if (current_cursor_index != 0) {
-//         current_cursor_index--;
-//     }
-// }
-
-// void increment_cursor() {
-//     if (current_cursor_index != LAST_CHAR_IDX) {
-//         current_cursor_index++;
-//     }
-// }
-
-// uint16_t get_base_position(uint16_t word_index) {
-//     int gap = (SCREEN_WIDTH_RES - WORD_LEN * n_words) / (n_words + 1);
-//     return (gap * (word_index + 1) + WORD_LEN * word_index +
-//             current_line_index * SCREEN_WIDTH_RES);
-// }
-
-// void show_char(uint16_t word_index, uint16_t letter_index, uint16_t char_code,
-//                uint16_t offset) {
-//     uint16_t positon = get_base_position(word_index) + offset + letter_index;
-//     outchar(char_code, positon);
-// }
-
-// void show_placeholders() {
-//     uint16_t current_word = 0;
-
-//     while (current_word < n_words) {
-//         if (solved[current_word]) {
-//             current_word++;
-//             continue;
-//         }
-
-//         uint16_t current_letter = 0;
-//         while (current_letter < WORD_LEN) {
-//             uint16_t char_code = PLACEHOLDER_CHARACTER_INDEX;
-//             if (current_letter == current_cursor_index) {
-//                 char_code += COLOR_FOR_CURSOR;
-//             }
-//             show_char(current_word, current_letter, char_code, SCREEN_WIDTH_RES);
-//             current_letter += 1;
-//         }
-
-//         current_word++;
-//     }
-// }
-
-// void receive_letter(uint16_t char_code) {
-//     input_word[current_cursor_index] = char_code;
-
-//     uint16_t current_word = 0;
-//     while (current_word < n_words) {
-//         if (solved[current_word]) {
-//             current_word++;
-//             continue;
-//         }
-//         show_char(current_word, current_cursor_index, char_code, 0);
-//         current_word++;
-//     }
-
-//     increment_cursor();
-// }
-
-// bool has_letter(int word_index, uint16_t char_code) {
-//     uint16_t current_letter = 0;
-//     while (current_letter < WORD_LEN) {
-//         if (game_words[word_index][current_letter] == char_code) {
-//             return true;
-//         }
-//         current_letter++;
-//     }
-//     return false;
-// }
-
-// void on_submit() {
-//     uint16_t current_word = 0;
-//     while (current_word < n_words) {
-//         if (solved[current_word]) {
-//             current_word++;
-//             continue;
-//         }
-
-//         uint16_t right_count = 0;
-//         uint16_t current_letter = 0;
-//         while (current_letter < WORD_LEN) {
-//             uint16_t char_code = input_word[current_letter];
-//             uint16_t color = 0;
-//             if (has_letter(current_word, char_code)) {
-//                 if (game_words[current_word][current_letter] == char_code) {
-//                     right_count++;
-//                     color = COLOR_FOR_RIGHT_LETTER;
-//                 } else {
-//                     color = COLOR_FOR_PRESENT_LETTER;
-//                 }
-//             } else {
-//                 color = COLOR_FOR_NOT_PRESENT_LETTER;
-//             }
-
-//             show_char(current_word, current_letter, color + char_code, 0);
-//             show_char(current_word, current_letter,
-//                       color + PLACEHOLDER_CHARACTER_INDEX, SCREEN_WIDTH_RES);
-//             current_letter++;
-
-//             if (right_count == WORD_LEN) {
-//                 solved[current_word] = true;
-//             }
-//         }
-//         current_word++;
-//     }
-
-//     current_cursor_index = 0;
-//     current_line_index += 1 + WORDS_Y_GAP;
-// }
-
-// void setup() {}
-
-// uint16_t posicao = 0;
-
-// void loop() {
-//     uint16_t char_atual = inchar();
-
-//     if (char_atual != SENTINEL_KEYPRESSED_VALUE) {
-//         outchar(char_atual, posicao++);
-//     }
-// }
+#define OFFSET_X 16
+#define OFFSET_Y 11
 
 #include <stdio.h>
 
@@ -180,7 +36,7 @@ char board[6][7];
 char row, player = '0';
 
 void outchar_ij(int i, int j, char char_code) {
-    int pos = i * SCREEN_WIDTH_RES + j;
+    int pos = (i + OFFSET_Y) * SCREEN_WIDTH_RES + (j + OFFSET_X);
     outchar(char_code, pos);
 }
 
