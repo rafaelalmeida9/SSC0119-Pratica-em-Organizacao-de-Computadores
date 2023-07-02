@@ -143,7 +143,7 @@ int check_win_direction(int dx, int dy) {
 
     if (win_code & 1) {
         print_winner(win_code & 2);
-        return 1;
+        return win_code;
     }
 
     return 0;
@@ -193,7 +193,7 @@ void loop() {
 
     display_board();
 
-    if (!game) {
+    if (!game && (win_code & 1)) {
         char msg_vitoria[] = "O jogador %d venceu!";
         sprintf(msg_vitoria, msg_vitoria, (win_code >> 1));
         display_msg(OFFSET_Y - 2, OFFSET_X - strlen(msg_vitoria) / 2 + 3, msg_vitoria, PURPLE);
