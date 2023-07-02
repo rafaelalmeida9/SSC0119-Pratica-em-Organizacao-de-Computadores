@@ -33,12 +33,14 @@
 #define BOARD_HEIGHT 6
 
 #define CONSECUTIVE_NO 4 // 4 consecutive equal numbers is the win condition
+#define NO_DIRECTIONS 4
 
 #include <stdio.h>
 
 char game = 1;
 char board[BOARD_HEIGHT][BOARD_WIDTH];
 char row, player = '0';
+int directions[NO_DIRECTIONS][2] = {{1, 1}, {1, 0}, {0, 1}, {-1, 1}};
 
 void outchar_ij(int i, int j, int char_code) {
     int pos = (i + OFFSET_Y) * SCREEN_WIDTH_RES + (j + OFFSET_X);
@@ -132,11 +134,11 @@ int check_win_direction(int dx, int dy) {
 }
 
 void verify_winner() {
-    if (check_win_direction(1, 1) || check_win_direction(1, 0) || check_win_direction(0, 1) ||
-        check_win_direction(-1, 1)) {
-        game = 0;
-        return;
-    }
+    for (int i = 0; i < NO_DIRECTIONS; i++)
+        if (check_win_direction(directions[i][0], directions[i][1])) {
+            game = 0;
+            return;
+        }
 }
 
 void toggle_player() {
@@ -167,5 +169,6 @@ void loop() {
         verify_winner();
         toggle_player();
     }
+
     display_board();
 }
