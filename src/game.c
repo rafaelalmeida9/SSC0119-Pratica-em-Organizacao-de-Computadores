@@ -42,8 +42,12 @@ char board[BOARD_HEIGHT][BOARD_WIDTH];
 char row, player = '0';
 int directions[NO_DIRECTIONS][2] = {{1, 1}, {1, 0}, {0, 1}, {-1, 1}};
 
+void outchar_ij_offset(int i, int j, int char_code) {
+    outchar_ij(i + OFFSET_Y, j + OFFSET_X, char_code);
+}
+
 void outchar_ij(int i, int j, int char_code) {
-    int pos = (i + OFFSET_Y) * SCREEN_WIDTH_RES + (j + OFFSET_X);
+    int pos = i * SCREEN_WIDTH_RES + j;
     outchar(char_code, pos);
 }
 
@@ -56,11 +60,23 @@ void display_board() {
             } else if (board[i][j] == '0') {
                 color = GREEN;
             }
-            outchar_ij(i, j, board[i][j] + color);
+            outchar_ij_offset(i, j, board[i][j] + color);
         }
     }
     for (int i = 1; i <= BOARD_WIDTH; i++) {
-        outchar_ij(6, i - 1, i + '0');
+        outchar_ij_offset(6, i - 1, i + '0');
+    }
+}
+
+void display_msg(int start_i, int start_j, char* msg, uint16_t color) {
+
+    for (int i = 0; *msg != '\0'; msg++) {
+        outchar_ij(start_i, start_j, (*msg) + color);
+        start_j++;
+        if (start_j == SCREEN_WIDTH_RES) {
+            start_j = 0;
+            start_i++;
+        }
     }
 }
 
@@ -133,12 +149,16 @@ int check_win_direction(int dx, int dy) {
     return 0;
 }
 
-void verify_winner() {
-    for (int i = 0; i < NO_DIRECTIONS; i++)
-        if (check_win_direction(directions[i][0], directions[i][1])) {
+int verify_winner() {
+    int win_code = 0;
+    for (int i = 0; i < NO_DIRECTIONS; i++) {
+        win_code = check_win_direction(directions[i][0], directions[i][1]);
+        if (win_code) {
             game = 0;
-            return;
+            return win_code;
         }
+    }
+    return 0;
 }
 
 void toggle_player() {
@@ -163,12 +183,19 @@ void loop() {
     }
 
     uint16_t current_char = inchar();
+    int win_code = 0;
     if (current_char != SENTINEL_KEYPRESSED_VALUE &&
         ('1' <= current_char && current_char <= '0' + BOARD_WIDTH)) {
         place_object(current_char - '1');
-        verify_winner();
+        win_code = verify_winner();
         toggle_player();
     }
 
     display_board();
+
+    if (!game) {
+        char msg_vitoria[] = "O jogador %d venceu!";
+        sprintf(msg_vitoria, msg_vitoria, (win_code >> 1));
+        display_msg(OFFSET_Y - 2, OFFSET_X - strlen(msg_vitoria) / 2 + 3, msg_vitoria, PURPLE);
+    }
 }
