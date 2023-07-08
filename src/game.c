@@ -39,7 +39,7 @@
 
 char game = 1;
 char board[BOARD_HEIGHT][BOARD_WIDTH];
-char row, player = '0';
+char row, player = '1';
 int directions[NO_DIRECTIONS][2] = {{1, 1}, {1, 0}, {0, 1}, {-1, 1}};
 
 void outchar_ij_offset(int i, int j, int char_code) {
@@ -54,13 +54,18 @@ void outchar_ij(int i, int j, int char_code) {
 void display_board() {
     for (int i = 0; i < BOARD_HEIGHT; i++) {
         for (int j = 0; j < BOARD_WIDTH; j++) {
-            uint16_t color = WHITE;
-            if (board[i][j] == '1') {
-                color = YELLOW;
-            } else if (board[i][j] == '0') {
-                color = GREEN;
+            uint16_t color = GRAY;
+            if (board[i][j] == '2') {
+                color = BLUE;
+            } else if (board[i][j] == '1') {
+                color = RED;
             }
-            outchar_ij_offset(i, j, board[i][j] + color);
+
+            char printed_character = board[i][j];
+            if (printed_character)
+
+                outchar_ij_offset(
+                    i, j, (board[i][j] == '_' ? '_' : (board[i][j] == '1' ? 'o' : 'x')) + color);
         }
     }
     for (int i = 1; i <= BOARD_WIDTH; i++) {
@@ -162,10 +167,10 @@ int verify_winner() {
 }
 
 void toggle_player() {
-    if (player == '0') {
-        player = '1';
+    if (player == '1') {
+        player = '2';
     } else {
-        player = '0';
+        player = '1';
     }
 }
 
@@ -196,6 +201,6 @@ void loop() {
     if (!game && (win_code & 1)) {
         char msg_vitoria[] = "O jogador %d venceu!";
         sprintf(msg_vitoria, msg_vitoria, (win_code >> 1));
-        display_msg(OFFSET_Y - 2, OFFSET_X - strlen(msg_vitoria) / 2 + 3, msg_vitoria, PURPLE);
+        display_msg(OFFSET_Y - 2, OFFSET_X - strlen(msg_vitoria) / 2 + 3, msg_vitoria, GREEN);
     }
 }
