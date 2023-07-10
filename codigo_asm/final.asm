@@ -24,6 +24,9 @@ static directions + #5, #1
 static directions + #6, #65535  ; -1 em complemento de 2 (16 bits)
 static directions + #7, #1
 
+victory_msg: string "Voce venceu, jogador #1."
+
+
 main:
     call setup
 
@@ -54,6 +57,11 @@ setup:
 
 loop:
     call display_board
+    loadn r0, #0
+    loadn r1, #0
+    loadn r2, #victory_msg
+    loadn r3, #2048
+    call display_msg
     rts
 
 outchar_ij:
@@ -164,3 +172,45 @@ display_board:
     pop r4
     rts
 
+
+display_msg:
+
+    push r4
+    push r5
+
+    mov r4, r2  ; r4 = msg
+    mov r5, r3  ; r5 = cor
+
+    __display_msg__loop:
+        loadi r2, r4  ; r2 = *msg
+        loadn r3, #0  ; r3 = 0
+        cmp r2, r3    ; == '0'
+        jeq __display_msg__endloop
+
+        push r0
+        push r1
+        add r2, r2, r5  ; r2 = (*msg) + color
+        call outchar_ij ; outchar_ij(r0, r1, r2)
+        pop r1
+        pop r0
+
+        inc r1
+
+        loadn r3, #40
+        cmp r1, r3
+        jne __display_msg__endif_r1_eq_screen_res
+
+        __display_msg__if_r1_eq_screen_res:
+            loadn r1, #0
+            inc r0
+        
+        __display_msg__endif_r1_eq_screen_res:
+        inc r4
+        jmp __display_msg__loop
+
+    __display_msg__endloop:
+
+    pop r5
+    pop r4
+
+    rts
