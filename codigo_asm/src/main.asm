@@ -85,11 +85,9 @@ setup:
 
 loop:
     call display_board
-    loadn r0, #0
-    loadn r1, #0
-    loadn r2, #victory_msg
-    loadn r3, #GRAY
-    call display_msg
+    loadn r0, #victory_msg
+    loadn r1, #GRAY
+    call display_centralized_msg
     rts
 
 outchar_ij:
@@ -240,5 +238,66 @@ display_msg:
 
     pop r5
     pop r4
+
+    rts
+
+; r0 = msg
+; returns r0 = len
+strlen:
+
+    mov r1, r0 ; r1 = str
+    loadn r0, #0; len = 0
+
+    __strlen__loop:
+        loadi r2, r1 ; r2 = *str
+        loadn r3, #0
+        cmp r2, r3 ; r2 = '\0'
+        jeq __strlen__endloop
+
+        inc r1 ; str++
+        inc r0 ; len++
+
+        jmp __strlen__loop
+
+    __strlen__endloop:
+
+    rts
+
+; r0 = msg
+; r1 = color
+display_centralized_msg:
+
+    push r1
+    push r4
+
+    mov r2, r0 ; r2 = msg
+
+    loadn r1, #OFFSET_X ; r1 = offsetx
+
+    loadn r0, #OFFSET_Y
+    loadn r3, #2
+    sub r0, r0, r3 ; r0 = offsety-2
+
+    push r0
+    push r1
+    push r2
+    mov r0, r2 ; r0 = msg
+    call strlen ; r0 = length(msg)
+    mov r3, r0; r3 = length(msg)
+    pop r2
+    pop r1
+    pop r0
+
+    loadn r4, #2
+    div r3, r3, r4
+    sub r1, r1, r3 ; r1 = offsetx - length(msg)/2
+
+    loadn r4, #3
+    add r1, r1, r4 ; r1 = offsetx - length(msg)/2 + 3
+
+    pop r4
+    pop r3 ; r3 = color
+
+    call display_msg
 
     rts
