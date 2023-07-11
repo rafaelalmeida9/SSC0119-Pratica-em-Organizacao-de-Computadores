@@ -15,7 +15,7 @@ static player + #0, #'1'
 number_valid_moves: var #1
 static number_valid_moves + #0, #0
 
-board:  var #42
+board:  var #27
 
 positions_x : var #4
 positions_y : var #4
@@ -48,7 +48,7 @@ setup:
     push r4
 
     loadn r0, #0
-    loadn r1, #42
+    loadn r1, #27
     loadn r2, #board
     loadn r4, #'_'
 
@@ -90,7 +90,7 @@ loop:
     cmp r0, r2
     jle __loop__final_part
     loadn r2, #'0'
-    loadn r3, #7
+    loadn r3, #9
     add r2, r2, r3
     cmp r0, r2
     jgr __loop__final_part
@@ -98,7 +98,7 @@ loop:
     loadn r2, #'1'
     sub r0, r0, r2
     call place_object
-    call verify_winner
+    ;call verify_winner
     mov r4, r0
     mov r5, r1
     call toggle_player 
@@ -161,7 +161,7 @@ outchar_ij_offset:
 
 ; r0 = i, r1 = j
 get_board_idx_ij:
-    loadn r3, #6
+    loadn r3, #9
     mul r0, r0, r3
     add r0, r0, r1
     loadn r3, #board
@@ -174,13 +174,13 @@ display_board:
 
     loadn r4, #0    ; i = 0
     __display_board__for_i:
-        loadn r0, #6
+        loadn r0, #3
         cmp r4, r0
         jeg __display_board__endfor_i
 
         loadn r5, #0    ; j = 0
         __display_board__for_j:
-            loadn r0, #7
+            loadn r0, #9
             cmp r5, r0
             jeg __display_board__endfor_j
 
@@ -231,7 +231,7 @@ display_board:
 
     loadn r4, #0    ; i = 0
     __display_board__for_i_2:
-        loadn r0, #7
+        loadn r0, #9
         cmp r4, r0
         jeg __display_board__endfor_i_2
 
@@ -370,7 +370,7 @@ place_object:
 
     __place_object__loop:
 
-        loadn r4, #6
+        loadn r4, #3
         cmp r1, r4
         jeq __place_object__endloop
 
@@ -389,7 +389,7 @@ place_object:
 
         inc r1
         jmp __place_object__loop
-
+    
     __place_object__endloop:
 
     loadn r4, #0
@@ -420,7 +420,7 @@ inside_board:
     cmp r0, r2
     jle __inside_board__end
 
-    loadn r2, #6
+    loadn r2, #3
     cmp r0, r2
     jeg __inside_board__end
 
@@ -428,7 +428,7 @@ inside_board:
     cmp r1, r2
     jle __inside_board__end
 
-    loadn r2, #7
+    loadn r2, #9
     cmp r1, r2
     jeg __inside_board__end
 
@@ -545,13 +545,13 @@ check_win_direction_board:
 
     loadn r3, #0 ; i = 0
     __check_win_direction_board__for_i:
-        loadn r4, #6
+        loadn r4, #3
         cmp r3, r4
         jeq __check_win_direction_board__endfor_i
 
         loadn r4, #0 ; j = 0
         __check_win_direction_board__for_j:
-            loadn r5, #7
+            loadn r5, #9
             cmp r4, r5
             jeq __check_win_direction_board__endfor_j
 

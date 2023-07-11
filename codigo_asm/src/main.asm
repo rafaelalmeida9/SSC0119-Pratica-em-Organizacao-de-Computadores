@@ -27,8 +27,8 @@ jmp main
 #define OFFSET_X 16
 #define OFFSET_Y 11
 
-#define BOARD_WIDTH 7
-#define BOARD_HEIGHT 6
+#define BOARD_WIDTH 9
+#define BOARD_HEIGHT 3
 #define BOARD_SIZE #eval (BOARD_WIDTH * BOARD_HEIGHT)
 
 #define CONSECUTIVE_NO 4
@@ -127,7 +127,7 @@ loop:
     loadn r2, #'1'
     sub r0, r0, r2
     call place_object
-    call verify_winner
+    ;call verify_winner
     mov r4, r0
     mov r5, r1
     call toggle_player 
@@ -190,7 +190,7 @@ outchar_ij_offset:
 
 ; r0 = i, r1 = j
 get_board_idx_ij:
-    loadn r3, #BOARD_HEIGHT
+    loadn r3, #BOARD_WIDTH
     mul r0, r0, r3
     add r0, r0, r1
     loadn r3, #board
@@ -418,7 +418,7 @@ place_object:
 
         inc r1
         jmp __place_object__loop
-
+    
     __place_object__endloop:
 
     loadn r4, #0
