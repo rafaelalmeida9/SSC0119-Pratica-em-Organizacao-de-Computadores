@@ -631,3 +631,81 @@ check_win_direction:
 
     rts
 
+; returns r0 = &(directions[i][j])
+get_direction_idx_ij:
+    loadn r3, #NO_DIRECTIONS
+    mul r0, r0, r3
+    add r0, r0, r1
+    loadn r3, #directions
+    add r0, r0, r3
+    rts
+
+
+; returns r0, r1 according to functions above
+verify_winner:
+
+    push r4
+    push r5
+
+    loadn r0, #0
+    loadn r1, #0
+    loadn r2, #0 ; i=0
+
+    __verify_winner__loop:
+        loadn r3, #NO_DIRECTIONS
+        cmp r2, r3
+        jeq __verify_winner__endloop
+
+        push r0
+        push r1
+        push r2
+        push r3
+
+        mov r0, r2 ; r0 = i
+        loadn r1, #0 ; r1 = 0
+        call get_direction_idx_ij ; r0 = &(directions[i][0])
+        loadi r0, r0 ; r0 = directions[i][0]
+        mov r4, r0 ; salva em r4
+
+        mov r0, r2 ; r0 = i
+        loadn r1, #1; r1 = 1
+        call get_direction_idx_ij ; r0 = &(directions[i][1])
+        loadi r1, r0 ; r1 = directions[i][1]
+
+        mov r0, r4 ; r0 volta a ser directions[i][0]
+
+        ; r0 e r1 agora estao corretos para poder chamar
+        call check_win_direction 
+        ; depois da chamada, temos o win code
+        ; salvo em r4 e em r5
+        mov r4, r0
+        mov r5, r1
+
+        loadn r0, #0
+        cmp r4, r0
+
+        pop r3
+        pop r2
+        pop r1
+        pop r0
+
+        jne __check_win_direction_board__ret_1
+
+        inc r2
+    __verify_winner__endloop:
+
+    __verify_winner_ret_0:
+    loadn r0, #0
+    loadn r1, #0
+    jmp __verify_winner__end
+
+    __verify_winner_ret_1:
+    mov r0, r4
+    mov r1, r5
+
+    __verify_winner__end:
+    pop r5
+    pop r4
+
+    rts
+
