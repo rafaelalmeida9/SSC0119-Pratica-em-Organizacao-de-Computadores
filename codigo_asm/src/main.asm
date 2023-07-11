@@ -59,7 +59,7 @@ static directions + #3, #0
 static directions + #4, #0
 static directions + #5, #1
 
-static directions + #6, #65535  ; -1 em complemento de 2 (16 bits)
+static directions + #6, #65534  ; -1 em complemento de 2 (16 bits)
 static directions + #7, #1
 
 victory_msg_1: string "Voce venceu, jogador #1."
@@ -72,6 +72,8 @@ main:
     __main__loop:
         call loop
         jmp __main__loop
+    
+    halt
 
 setup:
     push r4
@@ -136,18 +138,23 @@ loop:
     __loop__final_part:
     call display_board
     
+    ; checar empate
+    loadn r0, #number_valid_moves
+    loadi r0, r0
+    loadn r1, #BOARD_SIZE
+    cmp r0, r1
+    jeq __loop__draw
+    ; checar se algm ganhou
     loadn r0, #game
     loadi r0, r0
     loadn r1, #0
     cmp r0, r1
     jne __loop__final_final_part
 
-    ; o jogo acabou
-    loadn r0, #0
-    cmp r4, r0
-    jeq __loop__draw
+    ; algm ganhou
 
-    ; nao ocorreu empate
+    loadn r0, #0
+
     cmp r5, r0
     jeq __loop__vitoria_jogador_1
 
@@ -440,6 +447,11 @@ place_object:
     push r1
     push r2
     call toggle_player ; ocorreu um movimento valido
+    loadn r0, #number_valid_moves
+    loadi r1, r0
+    loadn r2, #1
+    add r1, r1, r2
+    storei r0, r1
     pop r2
     pop r1
     pop r0
@@ -662,25 +674,30 @@ directionize:
     push r4
     push r5
     push r6
+    push r7
 
     loadn r4, #0 ; 'i'
+    loadn r6, #0
+    loadn r7, #0
+
     __directionize__loop:
         loadn r5, #CONSECUTIVE_NO
         cmp r4, r5
         jeq __directionize__endloop
 
         add r5, r0, r4 ; pos_xs + i
-        mul r6, r2, r4 ; dx * i
         storei r5, r6 ; pos_xs[i] = dx * i
+        add r6, r6, r2
 
         add r5, r1, r4 ; pos_ys + i
-        mul r6, r3, r4 ; dy * i
-        storei r5, r6 ; pos_ys[i] = dy * i
+        storei r5, r7 ; pos_ys[i] = dy * i
+        add r7, r7, r3
 
         inc r4 ; i++
         jmp __directionize__loop
     __directionize__endloop:
 
+    pop r7
     pop r6
     pop r5
     pop r4
@@ -784,7 +801,7 @@ verify_winner:
         pop r1
         pop r0
 
-        jne __check_win_direction_board__ret_1
+        jne __verify_winner_ret_1
 
         inc r2
         jmp __verify_winner__loop
@@ -821,3 +838,6 @@ toggle_player:
     storei r0, r1 ; player = r1
 
     rts
+
+a_toda_poderosa_barreira:
+    jmp a_toda_poderosa_barreira
