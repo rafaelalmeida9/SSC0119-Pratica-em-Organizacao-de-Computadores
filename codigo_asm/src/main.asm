@@ -40,6 +40,9 @@ static game + #0, #1
 player: var #1
 static player + #0, #'1'
 
+number_valid_moves: var #1
+static number_valid_moves + #0, #0
+
 board:  var #BOARD_SIZE
 
 positions_x : var #CONSECUTIVE_NO
@@ -139,7 +142,7 @@ loop:
     jne __loop__final_final_part
 
     ; o jogo acabou
-    mov r0, #0
+    loadn r0, #0
     cmp r4, r0
     jeq __loop__draw
 
@@ -617,12 +620,12 @@ check_win_direction_board:
 
 
     __check_win_direction_board__ret_0:
-    load r0, #0
+    loadn r0, #0
     jmp __check_win_direction_board__end
 
 
     __check_win_direction_board__ret_1:
-    load r0, #1
+    loadn r0, #1
     mov r1, r7
 
 
@@ -642,7 +645,7 @@ directionize:
 
     loadn r4, #0 ; 'i'
     __directionize__loop:
-        load r5, #CONSECUTIVE_NO
+        loadn r5, #CONSECUTIVE_NO
         cmp r4, r5
         jeq __directionize__endloop
 
@@ -776,7 +779,7 @@ verify_winner:
     mov r0, r4
     mov r1, r5
     loadn r4, #game ; game = 0
-    loadi r5, #0
+    loadn r5, #0
     storei r4, r5
 
     __verify_winner__end:
