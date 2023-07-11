@@ -552,8 +552,37 @@ check_win_direction_board:
 
     __check_win_direction_board__end:
     pop r7
+    pop r6
     pop r5
     pop r4
-    pop r3
+
+    rts
+
+; r0 = int* pos_xs, r1 = int* pos_ys, r2 = dx, r3 = dy
+directionize:
+    push r4
+    push r5
+    push r6
+
+    loadn r4, #0 ; 'i'
+    __directionize__loop:
+        load r5, #CONSECUTIVE_NO
+        cmp r4, r5
+        jeq __directionize__endloop
+
+        add r5, r0, r4 ; pos_xs + i
+        mul r6, r2, r4 ; dx * i
+        storei r5, r6 ; pos_xs[i] = dx * i
+
+        add r5, r1, r4 ; pos_ys + i
+        mul r6, r3, r4 ; dy * i
+        storei r5, r6 ; pos_ys[i] = dy * i
+
+        inc r4
+    __directionize__endloop:
+
+    pop r6
+    pop r5
+    pop r4
 
     rts
