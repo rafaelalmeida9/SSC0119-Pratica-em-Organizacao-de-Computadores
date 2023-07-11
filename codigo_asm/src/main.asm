@@ -38,6 +38,9 @@ row:    var #1
 player: var #1
 board:  var #BOARD_SIZE
 
+positions_x : var #CONSECUTIVE_NO
+positions_y : var #CONSECUTIVE_NO
+
 directions: var ##eval (NO_DIRECTIONS * 2)
 
 static directions + #0, #1
@@ -586,3 +589,45 @@ directionize:
     pop r4
 
     rts
+
+; r0 = dx, r1 = dy
+; retorna como a funcao acima
+check_win_direction:
+
+    push r4
+    push r5
+    push r6 
+
+    loadn r2, #positions_x
+    loadn r3, #positions_y
+
+    push r0
+    push r1
+    push r2
+    push r3
+    ; (r0, r1, r2, r3) = (r2, r3, r0, r1)
+    mov r4, r0 
+    mov r0, r2
+    mov r5, r1
+    mov r1, r3
+    mov r2, r4 ; r0
+    mov r3, r5 ; r1
+    call check_win_direction_board
+    mov r4, r0
+    mov r5, r1 
+
+    pop r3
+    pop r2
+    pop r1
+    pop r0
+
+
+    mov r0, r4
+    mov r1, r5 
+
+    pop r6
+    pop r5
+    pop r4
+
+    rts
+
