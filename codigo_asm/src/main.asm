@@ -78,6 +78,8 @@ setup:
         storei r3, r4   ; *(board + r0) = r4
         inc r0
 
+        jmp __setup__loop_fill
+
     __setup__endloop_fill:
 
     pop r4
@@ -299,5 +301,61 @@ display_centralized_msg:
     pop r3 ; r3 = color
 
     call display_msg
+
+    rts
+
+; swaps r0 and r1 modifying r2
+swap_first_two:
+    mov r2, r0
+    mov r0, r1
+    mov r1, r2
+    rts
+
+; r0 = column number
+place_object:
+    
+    push r4
+    
+    loadn r1, #0; row
+
+    __place_object__loop:
+
+        loadn r4, #BOARD_HEIGHT
+        cmp r1, r4
+        jeq __place_object__endloop
+
+        push r0
+        push r1
+        call swap_first_two
+        call get_board_idx_ij
+        mov r3, r0 ; r3 = &board[i][j]
+        pop r1
+        pop r0
+        loadi r3, r3; r3 = board[i][j]
+
+        loadn r4, #'_'
+        cmp r3, r4
+        jne __place_object__endloop
+
+        inc r1
+        jmp __place_object__loop
+
+    __place_object__endloop:
+
+    loadn r4, #0
+    cmp r1, r4
+    jeq __place_object_do_nothing
+
+    loadn r4, #1 
+    sub r1, r1, r4
+    call swap_first_two
+    call get_board_idx_ij; r0 = &board[i][j]
+    loadn r4, #player
+    loadi r4, r4
+    storei r0, r4; board[i][j] = player
+
+    __place_object_do_nothing:
+
+    pop r4
 
     rts
