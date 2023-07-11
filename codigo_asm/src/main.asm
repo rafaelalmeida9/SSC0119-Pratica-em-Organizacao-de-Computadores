@@ -482,3 +482,78 @@ check_win_direction_pos:
     pop r4
 
     rts
+
+; r0 = int* d_is, r1 = int* d_js
+; returns like the previous function
+check_win_direction_board:
+    push r4
+    push r5
+    push r6
+    push r7
+
+    loadn r2, #0 ; did_i_win = 0
+
+    loadn r3, #0 ; i = 0
+    __check_win_direction_board__for_i:
+        loadn r4, #BOARD_HEIGHT
+        cmp r3, r4
+        jeq __check_win_direction_board__endfor_i
+
+        loadn r4, #0 ; j = 0
+        __check_win_direction_board__for_j:
+            loadn r5, #BOARD_WIDTH
+            cmp r4, r5
+            jeq __check_win_direction_board__endfor_j
+
+
+            push r0
+            push r1
+            push r2
+            push r3
+            
+            ; (r0, r1, r2, r3) = (r3, r4, r0, r1)
+            mov r6, r0
+            mov r7, r1
+            mov r0, r3
+            mov r1, r4
+            mov r2, r6 ; = r0
+            mov r3, r7 ; = r1
+
+            call check_win_direction_pos
+            mov r6, r0
+            loadn r7, #0
+            cmp r6, r7
+            mov r7, r1
+
+            pop r3
+            pop r2
+            pop r1
+            pop r0
+
+            jne __check_win_direction_board__ret_1
+
+            inc r4
+        __check_win_direction_board__endfor_j:
+
+        inc r3
+
+    __check_win_direction_board__endfor_i:
+
+
+    __check_win_direction_board__ret_0:
+    load r0, #0
+    jmp __check_win_direction_board__end
+
+
+    __check_win_direction_board__ret_1:
+    load r0, #1
+    mov r1, r7
+
+
+    __check_win_direction_board__end:
+    pop r7
+    pop r5
+    pop r4
+    pop r3
+
+    rts
