@@ -74,13 +74,14 @@ loop:
     loadn r0, #game
     loadi r0, r0
     loadn r1, #0
-    cmp r0, r1
+    cmp r0, r1 ; se jogo tiver acabado, halt
     jne __loop__game_is_running
 
     halt
 
     __loop__game_is_running:
 
+    ; le caractere e ve se e valido
     inchar r0
     loadn r1, #0 ; wincode
     loadn r2, #255
@@ -95,13 +96,13 @@ loop:
     cmp r0, r2
     jgr __loop__final_part
 
+    ; digitou caractere valido
     loadn r2, #'1'
-    sub r0, r0, r2
-    call place_object
-    call verify_winner
-    mov r4, r0
+    sub r0, r0, r2 ; pega indice da coluna correspondente
+    call place_object ; coloca numero nessa coluna
+    call verify_winner ; verifica se acabou
+    mov r4, r0 ; pega o wincode
     mov r5, r1
-    call toggle_player 
 
     __loop__final_part:
     call display_board
@@ -125,11 +126,13 @@ loop:
     __loop__vitoria_jogador_2:
     loadn r0, #victory_msg_2
     loadn r1, #512
+    call display_centralized_msg
     jmp __loop__final_final_part
 
     __loop__vitoria_jogador_1:
     loadn r0, #victory_msg_1
     loadn r1, #512
+    call display_centralized_msg
     jmp __loop__final_final_part
 
     __loop__draw:
@@ -376,7 +379,7 @@ place_object:
 
         push r0
         push r1
-        call swap_first_two
+        call swap_first_two ; agora r0 = linha e r1 = coluna
         call get_board_idx_ij
         mov r3, r0 ; r3 = &board[i][j]
         pop r1
@@ -384,7 +387,7 @@ place_object:
         loadi r3, r3; r3 = board[i][j]
 
         loadn r4, #'_'
-        cmp r3, r4
+        cmp r3, r4 ; se board[i][j] n for '_', sai
         jne __place_object__endloop
 
         inc r1
@@ -394,15 +397,23 @@ place_object:
 
     loadn r4, #0
     cmp r1, r4
-    jeq __place_object_do_nothing
+    jeq __place_object_do_nothing ; coluna cheia
 
     loadn r4, #1 
-    sub r1, r1, r4
-    call swap_first_two
+    sub r1, r1, r4 ; linha = linha-1
+    call swap_first_two ; r0 = linha, r1 = coluna
     call get_board_idx_ij; r0 = &board[i][j]
     loadn r4, #player
-    loadi r4, r4
+    loadi r4, r4 ; r4 = char do jogador atual
     storei r0, r4; board[i][j] = player
+
+    push r0
+    push r1
+    push r2
+    call toggle_player ; ocorreu um movimento valido
+    pop r2
+    pop r1
+    pop r0
 
     __place_object_do_nothing:
 
@@ -459,7 +470,7 @@ check_win_direction_pos:
     cmp r4, r5
     jeq __check_win_direction_pos__ret_0
 
-    loadn r5, #0 ; k=1
+    loadn r5, #1 ; k=1
 
     __check_win_direction_pos__for:
         loadn r6, #4
@@ -473,17 +484,20 @@ check_win_direction_pos:
         add r7, r3, r5 ; r7 = (d_js + k)
         loadi r7, r7 ; r7 = d_js[k]
         add r7, r1, r7 ; r7 = d_js[k] + j
+
         push r5
 
         push r0
-        push r3
+        push r1
         push r2
+        push r3
         mov r0, r6
         mov r1, r7
         call inside_board ; r0 = 0 if not inside
         mov r5, r0 ; r5 = retorno
-        pop r2
         pop r3
+        pop r2
+        pop r1
         pop r0
 
         ; se r5 = 0, retorna 0
@@ -496,18 +510,20 @@ check_win_direction_pos:
 
         ; se board[new_i][new_j] != r4, abortar
         push r0
+        push r1
         push r3
         mov r0, r6
         mov r1, r7
         call get_board_idx_ij; r0 = &board[new_i][new_j]
         loadi r6, r0 ; r6 = board[new_i][new_j]
         pop r3
+        pop r1
         pop r0
         cmp r4, r6
         jne __check_win_direction_pos__ret_0
 
         inc r5
-
+        jmp __check_win_direction_pos__for
     __check_win_direction_pos__endfor: 
     
     jmp __check_win_direction_pos__ret_1
@@ -573,7 +589,7 @@ check_win_direction_board:
             call check_win_direction_pos
             mov r6, r0
             loadn r7, #0
-            cmp r6, r7
+            cmp r6, r7; se !=0, achei vencedor
             mov r7, r1
 
             pop r3
@@ -583,19 +599,22 @@ check_win_direction_board:
 
             jne __check_win_direction_board__ret_1
 
-            inc r4
+            inc r4 ; j++
+            jmp __check_win_direction_board__for_j
         __check_win_direction_board__endfor_j:
 
-        inc r3
-
+        inc r3 ; i++
+        jmp __check_win_direction_board__for_i
     __check_win_direction_board__endfor_i:
 
-
+    ; se loop so terminou, retorna 0
     __check_win_direction_board__ret_0:
     loadn r0, #0
+    loadn r1, #0
     jmp __check_win_direction_board__end
 
 
+    ; se achou vencedor, ajusta wincode
     __check_win_direction_board__ret_1:
     loadn r0, #1
     mov r1, r7
@@ -629,7 +648,8 @@ directionize:
         mul r6, r3, r4 ; dy * i
         storei r5, r6 ; pos_ys[i] = dy * i
 
-        inc r4
+        inc r4 ; i++
+        jmp __directionize__loop
     __directionize__endloop:
 
     pop r6
@@ -660,19 +680,17 @@ check_win_direction:
     mov r1, r3
     mov r2, r4 ; r0
     mov r3, r5 ; r1
-    call check_win_direction_board
-    mov r4, r0
-    mov r5, r1 
-
+    call directionize
     pop r3
     pop r2
     pop r1
     pop r0
 
-
-    mov r0, r4
-    mov r1, r5 
-
+    mov r0, r2 ; r0 = positions_x
+    mov r1, r3 ; r1 = positions_y
+    call check_win_direction_board
+    ; (r0, r1) = wincode
+    
     pop r6
     pop r5
     pop r4
@@ -681,7 +699,7 @@ check_win_direction:
 
 ; returns r0 = &(directions[i][j])
 get_direction_idx_ij:
-    loadn r3, #4
+    loadn r3, #2
     mul r0, r0, r3
     add r0, r0, r1
     loadn r3, #directions
@@ -740,6 +758,7 @@ verify_winner:
         jne __check_win_direction_board__ret_1
 
         inc r2
+        jmp __verify_winner__loop
     __verify_winner__endloop:
 
     __verify_winner_ret_0:
