@@ -27,8 +27,8 @@ jmp main
 #define OFFSET_X 16
 #define OFFSET_Y 11
 
-#define BOARD_WIDTH 9
-#define BOARD_HEIGHT 3
+#define BOARD_WIDTH 7
+#define BOARD_HEIGHT 6
 #define BOARD_SIZE #eval (BOARD_WIDTH * BOARD_HEIGHT)
 
 #define CONSECUTIVE_NO 4
@@ -127,7 +127,7 @@ loop:
     loadn r2, #'1'
     sub r0, r0, r2
     call place_object
-    ;call verify_winner
+    call verify_winner
     mov r4, r0
     mov r5, r1
     call toggle_player 
@@ -488,7 +488,7 @@ check_win_direction_pos:
     cmp r4, r5
     jeq __check_win_direction_pos__ret_0
 
-    loadn r5, #1 ; k=1
+    loadn r5, #0 ; k=1
 
     __check_win_direction_pos__for:
         loadn r6, #CONSECUTIVE_NO
@@ -544,6 +544,7 @@ check_win_direction_pos:
 
     __check_win_direction_pos__ret_0:
     loadn r0, #0
+    loadn r1, #0
     
     jmp __check_win_direction_pos__end
 
