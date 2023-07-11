@@ -388,3 +388,97 @@ inside_board:
     mov r0, r3
     
     rts
+
+; r0=i, r1=j, r2=int* d_is, r3 = int* d_js
+; return r0 = 0 se nao ha winner, r0=1 se ha.
+; return r1 (em caso de winner) = 0 ou 1 (1 ou 2 resp.)
+check_win_direction_pos:
+    push r4
+    push r5
+    push r6
+    push r7
+
+    push r0
+    push r3
+    call get_board_idx_ij; r0 = &board[i][j]
+    loadi r4, r0 ; r4 = board[i][j]
+    pop r3
+    pop r0
+
+    loadn r5, #'_'
+    cmp r4, r5
+    jeq __check_win_direction_pos__ret_0
+
+    loadn r5, #1 ; k=1
+
+    __check_win_direction_pos__for:
+        loadn r6, #CONSECUTIVE_NO
+        cmp r5, r6
+        jeq __check_win_direction_pos__endfor
+
+        add r6, r2, r5 ; r6 = (d_is + k)
+        loadi r6, r6 ; r6 = d_is[k]
+        add r6, r0, r6 ; r6 = d_is[k] + i
+
+        add r7, r3, r5 ; r7 = (d_js + k)
+        loadi r7, r7 ; r7 = d_js[k]
+        add r7, r1, r7 ; r7 = d_js[k] + j
+        push r5
+
+        push r0
+        push r3
+        push r2
+        mov r0, r6
+        mov r1, r7
+        call inside_board ; r0 = 0 if not inside
+        mov r5, r0 ; r5 = retorno
+        pop r2
+        pop r3
+        pop r0
+
+        ; se r5 = 0, retorna 0
+        push r0
+        loadn r0, #0
+        cmp r0, r5 ; se r5 = 0
+        pop r0 
+        pop r5
+        jeq __check_win_direction_pos__ret_0
+
+        ; se board[new_i][new_j] != r4, abortar
+        push r0
+        push r3
+        mov r0, r6
+        mov r1, r7
+        call get_board_idx_ij; r0 = &board[new_i][new_j]
+        loadi r6, r0 ; r6 = board[new_i][new_j]
+        pop r3
+        pop r0
+        cmp r4, r6
+        jne __check_win_direction_pos__ret_0
+
+        inc r5
+
+    __check_win_direction_pos__endfor: 
+    
+    jmp __check_win_direction_pos__ret_1
+
+
+    __check_win_direction_pos__ret_0:
+    loadn r0, #0
+    
+    jmp __check_win_direction_pos__end
+
+
+    __check_win_direction_pos__ret_1:
+    loadn r0, #1
+    mov r3, r4
+    loadn r2, #'1'
+    sub r1, r3, r2
+
+    __check_win_direction_pos__end:
+    pop r7
+    pop r6
+    pop r5
+    pop r4
+
+    rts
