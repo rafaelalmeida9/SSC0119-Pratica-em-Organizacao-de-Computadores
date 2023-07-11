@@ -359,3 +359,32 @@ place_object:
     pop r4
 
     rts
+
+; r0 = i, r1 = j
+; return = r0 (1 or 0)
+inside_board:
+
+    loadn r3, #0
+
+    loadn r2, #0
+    cmp r0, r2
+    jle __inside_board__end
+
+    loadn r2, #BOARD_HEIGHT
+    cmp r0, r2
+    jeg __inside_board__end
+
+    loadn r2, #0
+    cmp r1, r2
+    jle __inside_board__end
+
+    loadn r2, #BOARD_WIDTH
+    cmp r1, r2
+    jeg __inside_board__end
+
+    loadn r3, #1
+
+    __inside_board__end:
+    mov r0, r3
+    
+    rts
