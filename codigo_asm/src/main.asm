@@ -709,3 +709,16 @@ verify_winner:
 
     rts
 
+
+toggle_player:
+    loadn r0, #player ; r0 = &player
+    loadi r1, r0 ; r1 = player
+    loadn r2, #'1' ; r2 = '1'
+    sub r1, r1, r2 ; r1 = 0 se era '1', 1 se era '2'
+    loadn r2, #1 ; r2 = 1
+    sub r1, r2, r1 ; r1 = 1 se era 0, 0 se era 1
+    loadn r2, #'1'
+    add r1, r1, r2 ; r1 = '1' se era 0, '2' se era 1
+    storei r0, r1 ; player = r1
+
+    rts
