@@ -22,6 +22,7 @@ jmp main
 #define KEYBOARD_MINUS 45
 #define KEYBOARD_PLUS 61
 #define KEYBOARD_ENTER 13
+#define SENTINEL_KEYPRESSED_VALUE 255
 
 #define OFFSET_X 16
 #define OFFSET_Y 11
@@ -34,8 +35,11 @@ jmp main
 #define NO_DIRECTIONS 4
 
 game:   var #1
-row:    var #1
+static game + #0, #1
+
 player: var #1
+static player + #0, #'1'
+
 board:  var #BOARD_SIZE
 
 positions_x : var #CONSECUTIVE_NO
@@ -55,8 +59,9 @@ static directions + #5, #1
 static directions + #6, #65535  ; -1 em complemento de 2 (16 bits)
 static directions + #7, #1
 
-victory_msg: string "Voce venceu, jogador #1."
-
+victory_msg_1: string "Voce venceu, jogador #1."
+victory_msg_2: string "Voce venceu, jogador #2."
+draw_msg: string "Ocorreu empate."
 
 main:
     call setup
@@ -89,10 +94,78 @@ setup:
     rts
 
 loop:
+    push r4
+    push r5
+
+    loadn r0, #game
+    loadi r0, r0
+    loadn r1, #0
+    cmp r0, r1
+    jne __loop__game_is_running
+
+    halt
+
+    __loop__game_is_running:
+
+    inchar r0
+    loadn r1, #0 ; wincode
+    loadn r2, #SENTINEL_KEYPRESSED_VALUE
+    cmp r0, r2
+    jeq __loop__final_part
+    loadn r2, #'1'
+    cmp r0, r2
+    jle __loop__final_part
+    loadn r2, #'0'
+    loadn r3, #BOARD_WIDTH
+    add r2, r2, r3
+    cmp r0, r2
+    jgr __loop__final_part
+
+    loadn r2, #'1'
+    sub r0, r0, r2
+    call place_object
+    call verify_winner
+    mov r4, r0
+    mov r5, r1
+    call toggle_player 
+
+    __loop__final_part:
     call display_board
-    loadn r0, #victory_msg
-    loadn r1, #GRAY
+    
+    loadn r0, #game
+    loadi r0, r0
+    loadn r1, #0
+    cmp r0, r1
+    jne __loop__final_final_part
+
+    ; o jogo acabou
+    mov r0, #0
+    cmp r4, r0
+    jeq __loop__draw
+
+    ; nao ocorreu empate
+    cmp r5, r0
+    jeq __loop__vitoria_jogador_1
+
+    ; nesse caso o jogador 2 ganhou
+    __loop__vitoria_jogador_2:
+    loadn r0, #victory_msg_2
+    loadn r1, #GREEN
+    jmp __loop__final_final_part
+
+    __loop__vitoria_jogador_1:
+    loadn r0, #victory_msg_1
+    loadn r1, #GREEN
+    jmp __loop__final_final_part
+
+    __loop__draw:
+    loadn r0, #draw_msg
+    loadn r1, #YELLOW
     call display_centralized_msg
+
+    __loop__final_final_part:
+    pop r5
+    pop r4
     rts
 
 outchar_ij:
@@ -702,6 +775,9 @@ verify_winner:
     __verify_winner_ret_1:
     mov r0, r4
     mov r1, r5
+    loadn r4, #game ; game = 0
+    loadi r5, #0
+    storei r4, r5
 
     __verify_winner__end:
     pop r5
