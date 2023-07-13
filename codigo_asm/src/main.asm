@@ -850,13 +850,13 @@ keyboard_input:
     __keyboard_input__loop_detecta_char:
         inchar r5
         cmp r5, r4
-        jne __keyboard_input__endloop_detecta_char
+        jeq __keyboard_input__loop_detecta_char
     __keyboard_input__endloop_detecta_char:
     
     __keyboard_input__loop_detecta_solta:
         inchar r6
         cmp r6, r4
-        jeq __keyboard_input__endloop_detecta_solta
+        jne __keyboard_input__loop_detecta_solta
     __keyboard_input__endloop_detecta_solta:
     
     mov r0, r5
