@@ -37,17 +37,105 @@ victory_msg_1: string "Voce venceu, jogador #1."
 victory_msg_2: string "Voce venceu, jogador #2."
 draw_msg: string "Ocorreu empate."
 
+starting_msg: string "Pressione alguma tecla para iniciar"
+end_msg: string "Pressione 0 para jogar novamente"
+
 main:
     call setup
 
+    loadn r0, #starting_msg
+    loadn r1, #0
+    call display_centralized_msg
+
     __main__loop:
         call loop
+        loadn r0, #game
+        loadn r1, #0
+        loadi r0, r0
+        cmp r0, r1
+        jeq __main__endloop
         jmp __main__loop
+    __main__endloop:
     
-    halt
+    loadn r0, #20
+    loadn r1, #4
+    loadn r2, #end_msg
+    loadn r3, #0
+
+    call display_msg
+
+    loadn r0, #'1'
+    __main__digita_zero:
+        call keyboard_input
+        loadn r1, #'0'
+        cmp r0, r1
+        jeq __main__end_digita_zero
+        jmp __main__digita_zero
+    __main__end_digita_zero:
+
+    call clr_screen
+    
+    jmp main
+
+
+clr_screen:
+    push r0
+    push r1
+    push r2
+    push r4
+    push r5
+    push r6
+    push r7
+
+    loadn r4, #0
+    loadn r7, #0
+    loadn r0, #' '
+    __clr_screen__for_i:
+        loadn r6, #30
+        cmp r4, r6
+        jeq __clr_screen__endfor_i
+
+        loadn r5, #0
+        __clr_screen__for_j:
+            loadn r6, #40
+            cmp r5, r6
+            jeq __clr_screen__endfor_j
+
+            outchar r0, r7 
+
+            inc r5
+            inc r7
+            jmp __clr_screen__for_j
+        __clr_screen__endfor_j:
+    
+        inc r4
+        jmp __clr_screen__for_i
+    __clr_screen__endfor_i:
+
+    pop r7
+    pop r6
+    pop r5
+    pop r4
+    pop r2
+    pop r1
+    pop r0
+
+    rts
 
 setup:
     push r4
+
+    loadn r0, #number_valid_moves
+    loadn r1, #0
+    storei r0, r1
+
+    loadn r0, #player
+    loadn r1, #'1'
+    storei r0, r1
+
+    loadn r0, #game
+    loadn r1, #1
+    storei r0, r1
 
     loadn r0, #0
     loadn r1, #42
@@ -76,15 +164,16 @@ loop:
     loadn r0, #game
     loadi r0, r0
     loadn r1, #0
-    cmp r0, r1 ; se jogo tiver acabado, halt
+    cmp r0, r1 ; se jogo tiver acabado, sai
     jne __loop__game_is_running
 
-    halt
+    rts
 
     __loop__game_is_running:
 
     ; le caractere e ve se e valido
     call keyboard_input
+    call clr_screen
     loadn r1, #0 ; wincode
     loadn r2, #255
     cmp r0, r2
@@ -146,6 +235,9 @@ loop:
     loadn r0, #draw_msg
     loadn r1, #2816
     call display_centralized_msg
+    loadn r0, #game
+    loadn r1, #0
+    storei r0, r1
 
     __loop__final_final_part:
     pop r5
