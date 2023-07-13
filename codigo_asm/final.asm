@@ -84,7 +84,7 @@ loop:
     __loop__game_is_running:
 
     ; le caractere e ve se e valido
-    inchar r0
+    call keyboard_input
     loadn r1, #0 ; wincode
     loadn r2, #255
     cmp r0, r2
@@ -807,6 +807,34 @@ toggle_player:
     loadn r2, #'1'
     add r1, r1, r2 ; r1 = '1' se era 0, '2' se era 1
     storei r0, r1 ; player = r1
+
+    rts
+
+
+keyboard_input:
+    push r4
+    push r5
+    push r6
+
+    loadn r4, #255
+
+    __keyboard_input__loop_detecta_char:
+        inchar r5
+        cmp r5, r4
+        jne __keyboard_input__endloop_detecta_char
+    __keyboard_input__endloop_detecta_char:
+    
+    __keyboard_input__loop_detecta_solta:
+        inchar r6
+        cmp r6, r4
+        jeq __keyboard_input__endloop_detecta_solta
+    __keyboard_input__endloop_detecta_solta:
+    
+    mov r0, r5
+
+    pop r6
+    pop r5
+    pop r4
 
     rts
 
