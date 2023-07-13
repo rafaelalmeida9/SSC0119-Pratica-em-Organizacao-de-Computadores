@@ -1,5 +1,5 @@
 MIF/HEX Update report for AP9
-Tue Jul 11 17:33:50 2023
+Thu Jul 13 16:55:29 2023
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; MIF/HEX Update Summary                                        ;
 +-----------------------+---------------------------------------+
-; MIF/HEX Update Status ; Successful - Tue Jul 11 17:33:50 2023 ;
+; MIF/HEX Update Status ; Successful - Thu Jul 13 16:55:29 2023 ;
 ; Revision Name         ; AP9                                   ;
 ; Top-level Entity Name ; AP9                                   ;
 ; Family                ; Cyclone V                             ;
@@ -44,16 +44,16 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------+---------------------------------------+
 
 
-+-------------------------------------------------+
-; MIF/HEX Update Processed Files                  ;
-+-------------------------------------------------+
-; File Name                                       ;
-+-------------------------------------------------+
-; C:/Users/11872028/Desktop/DE0_CV/charmap.mif    ;
-; C:/Users/11872028/Desktop/DE0_CV/cpuram.mif     ;
-; C:/Users/11872028/Desktop/DE0_CV/video_mem1.mif ;
-; C:/Users/11872028/Desktop/DE0_CV/video_mem2.mif ;
-+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                                               ;
++--------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                    ;
++--------------------------------------------------------------------------------------------------------------+
+; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/charmap.mif    ;
+; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpuram.mif     ;
+; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/video_mem1.mif ;
+; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/video_mem2.mif ;
++--------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------+
@@ -62,18 +62,18 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime MIF/HEX Update
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Tue Jul 11 17:33:42 2023
+    Info: Processing started: Thu Jul 13 16:55:22 2023
 Info: Command: quartus_cdb AP9 -c AP9 --update_mif
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (39024): Processed the following Memory Initialization File(s)
-    Info (39025): Processed Memory Initialization File C:/Users/11872028/Desktop/DE0_CV/charmap.mif File: C:/Users/11872028/Desktop/DE0_CV/charmap.mif Line: 0
-    Info (39025): Processed Memory Initialization File C:/Users/11872028/Desktop/DE0_CV/cpuram.mif File: C:/Users/11872028/Desktop/DE0_CV/cpuram.mif Line: 0
-    Info (39025): Processed Memory Initialization File C:/Users/11872028/Desktop/DE0_CV/video_mem1.mif File: C:/Users/11872028/Desktop/DE0_CV/video_mem1.mif Line: 0
-    Info (39025): Processed Memory Initialization File C:/Users/11872028/Desktop/DE0_CV/video_mem2.mif File: C:/Users/11872028/Desktop/DE0_CV/video_mem2.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/charmap.mif File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/charmap.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpuram.mif File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpuram.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/video_mem1.mif File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/video_mem1.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/video_mem2.mif File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/video_mem2.mif Line: 0
 Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4853 megabytes
-    Info: Processing ended: Tue Jul 11 17:33:50 2023
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 4859 megabytes
+    Info: Processing ended: Thu Jul 13 16:55:29 2023
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 
 

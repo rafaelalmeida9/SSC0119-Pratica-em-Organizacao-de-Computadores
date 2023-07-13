@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AP9
-Tue Jul 11 17:25:48 2023
+Thu Jul 13 18:02:20 2023
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Jul 11 17:25:48 2023       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jul 13 18:02:20 2023       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; AP9                                         ;
 ; Top-level Entity Name           ; AP9                                         ;
@@ -200,97 +200,97 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
-; cpu.vhd                          ; yes             ; User VHDL File                           ; C:/Users/11872028/Desktop/DE0_CV/cpu.vhd                                     ;         ;
-; AP9.bdf                          ; yes             ; User Block Diagram/Schematic File        ; C:/Users/11872028/Desktop/DE0_CV/AP9.bdf                                     ;         ;
-; lpm_rom0.vhd                     ; yes             ; User Wizard-Generated File               ; C:/Users/11872028/Desktop/DE0_CV/lpm_rom0.vhd                                ;         ;
-; TEXT_DRAWER.vhd                  ; yes             ; User VHDL File                           ; C:/Users/11872028/Desktop/DE0_CV/TEXT_DRAWER.vhd                             ;         ;
-; VGA_MOD.bdf                      ; yes             ; User Block Diagram/Schematic File        ; C:/Users/11872028/Desktop/DE0_CV/VGA_MOD.bdf                                 ;         ;
-; video_mem2.mif                   ; yes             ; User Memory Initialization File          ; C:/Users/11872028/Desktop/DE0_CV/video_mem2.mif                              ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File                           ; C:/Users/11872028/Desktop/DE0_CV/vga_sync.vhd                                ;         ;
-; ASCII_CONV.vhd                   ; yes             ; User VHDL File                           ; C:/Users/11872028/Desktop/DE0_CV/ASCII_CONV.vhd                              ;         ;
-; RAM.vhd                          ; yes             ; User Wizard-Generated File               ; C:/Users/11872028/Desktop/DE0_CV/RAM.vhd                                     ;         ;
-; POS_CONV.vhd                     ; yes             ; User VHDL File                           ; C:/Users/11872028/Desktop/DE0_CV/POS_CONV.vhd                                ;         ;
-; video_filter.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11872028/Desktop/DE0_CV/video_filter.bdf                            ;         ;
-; lpm_dff0.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/DE0_CV/lpm_dff0.vhd                                ;         ;
-; lpm_ff.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_ff.tdf            ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_constant.inc      ;         ;
-; aglobal211.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc        ;         ;
-; lpm_dff2.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/DE0_CV/lpm_dff2.vhd                                ;         ;
-; color_bridge.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/11872028/Desktop/DE0_CV/color_bridge.vhd                            ;         ;
-; busmux.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/busmux.tdf            ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf           ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muxlut.inc            ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
-; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc          ;         ;
-; db/mux_sjc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/mux_sjc.tdf                              ;         ;
-; lpm_ram_dq0.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq0.vhd                             ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_o1j1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_o1j1.tdf                      ;         ;
-; video_mem1.mif                   ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/11872028/Desktop/DE0_CV/video_mem1.mif                              ;         ;
-; db/decode_dla.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/decode_dla.tdf                           ;         ;
-; db/decode_61a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/decode_61a.tdf                           ;         ;
-; db/mux_pfb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/mux_pfb.tdf                              ;         ;
-; demux.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11872028/Desktop/DE0_CV/demux.bdf                                   ;         ;
-; fifo0.vhd                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/DE0_CV/fifo0.vhd                                   ;         ;
-; scfifo.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/scfifo.tdf            ;         ;
-; a_regfifo.inc                    ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_regfifo.inc         ;         ;
-; a_dpfifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_dpfifo.inc          ;         ;
-; a_i2fifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_i2fifo.inc          ;         ;
-; a_fffifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_fffifo.inc          ;         ;
-; a_f2fifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_f2fifo.inc          ;         ;
-; db/scfifo_2491.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/scfifo_2491.tdf                          ;         ;
-; db/a_dpfifo_9a91.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/a_dpfifo_9a91.tdf                        ;         ;
-; db/altsyncram_fqn1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_fqn1.tdf                      ;         ;
-; db/cmpr_im8.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/cmpr_im8.tdf                             ;         ;
-; db/cntr_vhb.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/cntr_vhb.tdf                             ;         ;
-; db/cntr_ci7.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/cntr_ci7.tdf                             ;         ;
-; db/cntr_0ib.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/cntr_0ib.tdf                             ;         ;
-; db/mux_flc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/mux_flc.tdf                              ;         ;
-; lpm_ram_dq1.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq1.vhd                             ;         ;
-; db/altsyncram_k1j1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_k1j1.tdf                      ;         ;
-; db/decode_5la.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/decode_5la.tdf                           ;         ;
-; db/decode_u0a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/decode_u0a.tdf                           ;         ;
-; db/mux_hfb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/mux_hfb.tdf                              ;         ;
-; db/mux_dlc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/mux_dlc.tdf                              ;         ;
-; lpm_dff1.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/DE0_CV/lpm_dff1.vhd                                ;         ;
-; seletorclock.v                   ; yes             ; Auto-Found Verilog HDL File              ; C:/Users/11872028/Desktop/DE0_CV/seletorclock.v                              ;         ;
-; clk_div.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/Users/11872028/Desktop/DE0_CV/clk_div.vhd                                 ;         ;
-; debounce.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/11872028/Desktop/DE0_CV/debounce.vhd                                ;         ;
-; dec_keyboard.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/11872028/Desktop/DE0_CV/dec_keyboard.vhd                            ;         ;
-; keyboard.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/11872028/Desktop/DE0_CV/keyboard.vhd                                ;         ;
-; db/altsyncram_doi1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_doi1.tdf                      ;         ;
-; cpuram.mif                       ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/11872028/Desktop/DE0_CV/cpuram.mif                                  ;         ;
-; db/decode_8la.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/decode_8la.tdf                           ;         ;
-; db/decode_11a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/decode_11a.tdf                           ;         ;
-; db/mux_7hb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/mux_7hb.tdf                              ;         ;
-; db/altsyncram_7kd1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_7kd1.tdf                      ;         ;
-; charmap.mif                      ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/11872028/Desktop/DE0_CV/charmap.mif                                 ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_a5m.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/lpm_divide_a5m.tdf                       ;         ;
-; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/sign_div_unsign_dnh.tdf                  ;         ;
-; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/alt_u_div_03f.tdf                        ;         ;
-; db/lpm_divide_7dm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/lpm_divide_7dm.tdf                       ;         ;
-; db/lpm_divide_05m.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/lpm_divide_05m.tdf                       ;         ;
-; db/sign_div_unsign_3nh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/sign_div_unsign_3nh.tdf                  ;         ;
-; db/alt_u_div_c2f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/alt_u_div_c2f.tdf                        ;         ;
-; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/lpm_divide_hbm.tdf                       ;         ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/sign_div_unsign_nlh.tdf                  ;         ;
-; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/DE0_CV/db/alt_u_div_kve.tdf                        ;         ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                                             ; Library ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
+; cpu.vhd                          ; yes             ; User VHDL File                           ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd                    ;         ;
+; AP9.bdf                          ; yes             ; User Block Diagram/Schematic File        ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/AP9.bdf                    ;         ;
+; lpm_rom0.vhd                     ; yes             ; User Wizard-Generated File               ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_rom0.vhd               ;         ;
+; TEXT_DRAWER.vhd                  ; yes             ; User VHDL File                           ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/TEXT_DRAWER.vhd            ;         ;
+; VGA_MOD.bdf                      ; yes             ; User Block Diagram/Schematic File        ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/VGA_MOD.bdf                ;         ;
+; video_mem2.mif                   ; yes             ; User Memory Initialization File          ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/video_mem2.mif             ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                           ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/vga_sync.vhd               ;         ;
+; ASCII_CONV.vhd                   ; yes             ; User VHDL File                           ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/ASCII_CONV.vhd             ;         ;
+; RAM.vhd                          ; yes             ; User Wizard-Generated File               ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/RAM.vhd                    ;         ;
+; POS_CONV.vhd                     ; yes             ; User VHDL File                           ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/POS_CONV.vhd               ;         ;
+; video_filter.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/video_filter.bdf           ;         ;
+; lpm_dff0.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff0.vhd               ;         ;
+; lpm_ff.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_ff.tdf                                                        ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_constant.inc                                                  ;         ;
+; aglobal211.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/aglobal211.inc                                                    ;         ;
+; lpm_dff2.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff2.vhd               ;         ;
+; color_bridge.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/color_bridge.vhd           ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/busmux.tdf                                                        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.inc                                                       ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                       ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/muxlut.inc                                                        ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/bypassff.inc                                                      ;         ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altshift.inc                                                      ;         ;
+; db/mux_sjc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_sjc.tdf             ;         ;
+; lpm_ram_dq0.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq0.vhd            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf                                                    ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_decode.inc                                                    ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                     ;         ;
+; altrom.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altrom.inc                                                        ;         ;
+; altram.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altram.inc                                                        ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altdpram.inc                                                      ;         ;
+; db/altsyncram_o1j1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_o1j1.tdf     ;         ;
+; video_mem1.mif                   ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/video_mem1.mif             ;         ;
+; db/decode_dla.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_dla.tdf          ;         ;
+; db/decode_61a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_61a.tdf          ;         ;
+; db/mux_pfb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_pfb.tdf             ;         ;
+; demux.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/demux.bdf                  ;         ;
+; fifo0.vhd                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/fifo0.vhd                  ;         ;
+; scfifo.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/scfifo.tdf                                                        ;         ;
+; a_regfifo.inc                    ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_regfifo.inc                                                     ;         ;
+; a_dpfifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_dpfifo.inc                                                      ;         ;
+; a_i2fifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_i2fifo.inc                                                      ;         ;
+; a_fffifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_fffifo.inc                                                      ;         ;
+; a_f2fifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/a_f2fifo.inc                                                      ;         ;
+; db/scfifo_2491.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/scfifo_2491.tdf         ;         ;
+; db/a_dpfifo_9a91.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/a_dpfifo_9a91.tdf       ;         ;
+; db/altsyncram_fqn1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_fqn1.tdf     ;         ;
+; db/cmpr_im8.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/cmpr_im8.tdf            ;         ;
+; db/cntr_vhb.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/cntr_vhb.tdf            ;         ;
+; db/cntr_ci7.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/cntr_ci7.tdf            ;         ;
+; db/cntr_0ib.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/cntr_0ib.tdf            ;         ;
+; db/mux_flc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_flc.tdf             ;         ;
+; lpm_ram_dq1.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq1.vhd            ;         ;
+; db/altsyncram_k1j1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_k1j1.tdf     ;         ;
+; db/decode_5la.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_5la.tdf          ;         ;
+; db/decode_u0a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_u0a.tdf          ;         ;
+; db/mux_hfb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_hfb.tdf             ;         ;
+; db/mux_dlc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_dlc.tdf             ;         ;
+; lpm_dff1.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff1.vhd               ;         ;
+; seletorclock.v                   ; yes             ; Auto-Found Verilog HDL File              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/seletorclock.v             ;         ;
+; clk_div.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/clk_div.vhd                ;         ;
+; debounce.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/debounce.vhd               ;         ;
+; dec_keyboard.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/dec_keyboard.vhd           ;         ;
+; keyboard.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/keyboard.vhd               ;         ;
+; db/altsyncram_doi1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_doi1.tdf     ;         ;
+; cpuram.mif                       ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpuram.mif                 ;         ;
+; db/decode_8la.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_8la.tdf          ;         ;
+; db/decode_11a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_11a.tdf          ;         ;
+; db/mux_7hb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_7hb.tdf             ;         ;
+; db/altsyncram_7kd1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_7kd1.tdf     ;         ;
+; charmap.mif                      ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/charmap.mif                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                    ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/abs_divider.inc                                                   ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                             ; c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                               ;         ;
+; db/lpm_divide_a5m.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/lpm_divide_a5m.tdf      ;         ;
+; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/sign_div_unsign_dnh.tdf ;         ;
+; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/alt_u_div_03f.tdf       ;         ;
+; db/lpm_divide_7dm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/lpm_divide_7dm.tdf      ;         ;
+; db/lpm_divide_05m.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/lpm_divide_05m.tdf      ;         ;
+; db/sign_div_unsign_3nh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/sign_div_unsign_3nh.tdf ;         ;
+; db/alt_u_div_c2f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/alt_u_div_c2f.tdf       ;         ;
+; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/lpm_divide_hbm.tdf      ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/sign_div_unsign_nlh.tdf ;         ;
+; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/alt_u_div_kve.tdf       ;         ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -298,14 +298,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 1519         ;
+; Estimate of Logic utilization (ALMs needed) ; 1526         ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 2506         ;
-;     -- 7 input functions                    ; 34           ;
-;     -- 6 input functions                    ; 468          ;
+; Combinational ALUT usage for logic          ; 2519         ;
+;     -- 7 input functions                    ; 20           ;
+;     -- 6 input functions                    ; 482          ;
 ;     -- 5 input functions                    ; 670          ;
 ;     -- 4 input functions                    ; 476          ;
-;     -- <=3 input functions                  ; 858          ;
+;     -- <=3 input functions                  ; 871          ;
 ;                                             ;              ;
 ; Dedicated logic registers                   ; 663          ;
 ;                                             ;              ;
@@ -317,8 +317,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 450          ;
-; Total fan-out                               ; 15698        ;
-; Average fan-out                             ; 4.67         ;
+; Total fan-out                               ; 15723        ;
+; Average fan-out                             ; 4.66         ;
 +---------------------------------------------+--------------+
 
 
@@ -327,7 +327,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |AP9                                         ; 2506 (1)            ; 663 (0)                   ; 946176            ; 1          ; 30   ; 0            ; |AP9                                                                                                                          ; AP9                 ; work         ;
+; |AP9                                         ; 2519 (1)            ; 663 (0)                   ; 946176            ; 1          ; 30   ; 0            ; |AP9                                                                                                                          ; AP9                 ; work         ;
 ;    |POS_CONV:inst13|                         ; 228 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|POS_CONV:inst13                                                                                                          ; POS_CONV            ; work         ;
 ;       |lpm_divide:Div0|                      ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|POS_CONV:inst13|lpm_divide:Div0                                                                                          ; lpm_divide          ; work         ;
 ;          |lpm_divide_hbm:auto_generated|     ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|POS_CONV:inst13|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                            ; lpm_divide_hbm      ; work         ;
@@ -383,7 +383,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |altsyncram_k1j1:auto_generated| ; 2 (0)               ; 0 (0)                     ; 65536             ; 0          ; 0    ; 0            ; |AP9|VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated                            ; altsyncram_k1j1     ; work         ;
 ;                |decode_5la:decode3|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|decode_5la:decode3         ; decode_5la          ; work         ;
 ;    |clk_div:inst25|                          ; 30 (30)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |AP9|clk_div:inst25                                                                                                           ; clk_div             ; work         ;
-;    |cpu:inst12|                              ; 1886 (1314)         ; 372 (372)                 ; 0                 ; 1          ; 0    ; 0            ; |AP9|cpu:inst12                                                                                                               ; cpu                 ; work         ;
+;    |cpu:inst12|                              ; 1899 (1327)         ; 372 (372)                 ; 0                 ; 1          ; 0    ; 0            ; |AP9|cpu:inst12                                                                                                               ; cpu                 ; work         ;
 ;       |lpm_divide:Div0|                      ; 286 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|cpu:inst12|lpm_divide:Div0                                                                                               ; lpm_divide          ; work         ;
 ;          |lpm_divide_7dm:auto_generated|     ; 286 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|cpu:inst12|lpm_divide:Div0|lpm_divide_7dm:auto_generated                                                                 ; lpm_divide_7dm      ; work         ;
 ;             |sign_div_unsign_dnh:divider|    ; 286 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|cpu:inst12|lpm_divide:Div0|lpm_divide_7dm:auto_generated|sign_div_unsign_dnh:divider                                     ; sign_div_unsign_dnh ; work         ;
@@ -588,8 +588,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux9                                                                                             ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|state                                                                                            ;
 ; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |AP9|cpu:inst12|result[15]                                                                                       ;
 ; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |AP9|VGA_MOD:inst|busmux:inst13|lpm_mux:$00000|mux_sjc:auto_generated|l1_w3_n0_mux_dataout                       ;
+; 10:1               ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |AP9|cpu:inst12|result[15]                                                                                       ;
 ; 11:1               ; 16 bits   ; 112 LEs       ; 80 LEs               ; 32 LEs                 ; No         ; |AP9|cpu:inst12|Mux96                                                                                            ;
 ; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
 ; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
@@ -1237,7 +1237,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 49                          ;
 ;     SCLR              ; 1                           ;
 ;     plain             ; 78                          ;
-; arriav_lcell_comb     ; 2506                        ;
+; arriav_lcell_comb     ; 2519                        ;
 ;     arith             ; 613                         ;
 ;         0 data inputs ; 78                          ;
 ;         1 data inputs ; 108                         ;
@@ -1245,15 +1245,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 44                          ;
 ;         4 data inputs ; 73                          ;
 ;         5 data inputs ; 245                         ;
-;     extend            ; 34                          ;
-;         7 data inputs ; 34                          ;
-;     normal            ; 1818                        ;
+;     extend            ; 20                          ;
+;         7 data inputs ; 20                          ;
+;     normal            ; 1845                        ;
 ;         1 data inputs ; 23                          ;
 ;         2 data inputs ; 138                         ;
-;         3 data inputs ; 367                         ;
+;         3 data inputs ; 380                         ;
 ;         4 data inputs ; 397                         ;
 ;         5 data inputs ; 425                         ;
-;         6 data inputs ; 468                         ;
+;         6 data inputs ; 482                         ;
 ;     shared            ; 41                          ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 6                           ;
@@ -1265,7 +1265,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 133                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 36.00                       ;
-; Average LUT depth     ; 15.51                       ;
+; Average LUT depth     ; 15.47                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1274,7 +1274,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -1284,47 +1284,47 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Tue Jul 11 17:25:24 2023
+    Info: Processing started: Thu Jul 13 18:01:57 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AP9 -c AP9
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
-    Info (12022): Found design unit 1: cpu-main File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 34
-    Info (12023): Found entity 1: cpu File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 9
+    Info (12022): Found design unit 1: cpu-main File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 34
+    Info (12023): Found entity 1: cpu File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file ap9.bdf
     Info (12023): Found entity 1: AP9
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_rom0.vhd
-    Info (12022): Found design unit 1: lpm_rom0-SYN File: C:/Users/11872028/Desktop/DE0_CV/lpm_rom0.vhd Line: 52
-    Info (12023): Found entity 1: lpm_rom0 File: C:/Users/11872028/Desktop/DE0_CV/lpm_rom0.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_rom0-SYN File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_rom0.vhd Line: 52
+    Info (12023): Found entity 1: lpm_rom0 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_rom0.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file text_drawer.vhd
-    Info (12022): Found design unit 1: TEXT_DRAWER-main File: C:/Users/11872028/Desktop/DE0_CV/TEXT_DRAWER.vhd Line: 23
-    Info (12023): Found entity 1: TEXT_DRAWER File: C:/Users/11872028/Desktop/DE0_CV/TEXT_DRAWER.vhd Line: 6
+    Info (12022): Found design unit 1: TEXT_DRAWER-main File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/TEXT_DRAWER.vhd Line: 23
+    Info (12023): Found entity 1: TEXT_DRAWER File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/TEXT_DRAWER.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file vga_mod.bdf
     Info (12023): Found entity 1: VGA_MOD
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-main File: C:/Users/11872028/Desktop/DE0_CV/vga_sync.vhd Line: 18
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/11872028/Desktop/DE0_CV/vga_sync.vhd Line: 6
+    Info (12022): Found design unit 1: VGA_SYNC-main File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/vga_sync.vhd Line: 18
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/vga_sync.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file kb_ascii.vhd
-    Info (12022): Found design unit 1: KB_ASCII-main File: C:/Users/11872028/Desktop/DE0_CV/KB_ASCII.vhd Line: 21
-    Info (12023): Found entity 1: KB_ASCII File: C:/Users/11872028/Desktop/DE0_CV/KB_ASCII.vhd Line: 8
+    Info (12022): Found design unit 1: KB_ASCII-main File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/KB_ASCII.vhd Line: 21
+    Info (12023): Found entity 1: KB_ASCII File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/KB_ASCII.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file hex_2_7seg.vhd
-    Info (12022): Found design unit 1: hex_2_7seg-main File: C:/Users/11872028/Desktop/DE0_CV/hex_2_7seg.vhd Line: 13
-    Info (12023): Found entity 1: hex_2_7seg File: C:/Users/11872028/Desktop/DE0_CV/hex_2_7seg.vhd Line: 6
+    Info (12022): Found design unit 1: hex_2_7seg-main File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/hex_2_7seg.vhd Line: 13
+    Info (12023): Found entity 1: hex_2_7seg File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/hex_2_7seg.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file lcd_mod.vhd
-    Info (12022): Found design unit 1: LCD_MOD-main File: C:/Users/11872028/Desktop/DE0_CV/LCD_MOD.vhd Line: 20
-    Info (12023): Found entity 1: LCD_MOD File: C:/Users/11872028/Desktop/DE0_CV/LCD_MOD.vhd Line: 6
+    Info (12022): Found design unit 1: LCD_MOD-main File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/LCD_MOD.vhd Line: 20
+    Info (12023): Found entity 1: LCD_MOD File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/LCD_MOD.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ascii_conv.vhd
-    Info (12022): Found design unit 1: ASCII_CONV-main File: C:/Users/11872028/Desktop/DE0_CV/ASCII_CONV.vhd Line: 12
-    Info (12023): Found entity 1: ASCII_CONV File: C:/Users/11872028/Desktop/DE0_CV/ASCII_CONV.vhd Line: 6
+    Info (12022): Found design unit 1: ASCII_CONV-main File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/ASCII_CONV.vhd Line: 12
+    Info (12023): Found entity 1: ASCII_CONV File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/ASCII_CONV.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
-    Info (12022): Found design unit 1: ram-SYN File: C:/Users/11872028/Desktop/DE0_CV/RAM.vhd Line: 54
-    Info (12023): Found entity 1: RAM File: C:/Users/11872028/Desktop/DE0_CV/RAM.vhd Line: 42
+    Info (12022): Found design unit 1: ram-SYN File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/RAM.vhd Line: 54
+    Info (12023): Found entity 1: RAM File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/RAM.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file pos_conv.vhd
-    Info (12022): Found design unit 1: POS_CONV-main File: C:/Users/11872028/Desktop/DE0_CV/POS_CONV.vhd Line: 15
-    Info (12023): Found entity 1: POS_CONV File: C:/Users/11872028/Desktop/DE0_CV/POS_CONV.vhd Line: 6
+    Info (12022): Found design unit 1: POS_CONV-main File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/POS_CONV.vhd Line: 15
+    Info (12023): Found entity 1: POS_CONV File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/POS_CONV.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file keyviewer.vhd
-    Info (12022): Found design unit 1: keyviewer-behav File: C:/Users/11872028/Desktop/DE0_CV/keyviewer.vhd Line: 16
-    Info (12023): Found entity 1: keyviewer File: C:/Users/11872028/Desktop/DE0_CV/keyviewer.vhd Line: 5
+    Info (12022): Found design unit 1: keyviewer-behav File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/keyviewer.vhd Line: 16
+    Info (12023): Found entity 1: keyviewer File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/keyviewer.vhd Line: 5
 Info (12127): Elaborating entity "AP9" for the top level hierarchy
 Warning (275089): Not all bits in bus "LEDR[8..1]" are used
 Warning (275089): Not all bits in bus "SW[9..0]" are used
@@ -1335,31 +1335,31 @@ Warning (12125): Using design file video_filter.bdf, which is not specified as a
     Info (12023): Found entity 1: VIDEO_FILTER
 Info (12128): Elaborating entity "VIDEO_FILTER" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8"
 Warning (12125): Using design file lpm_dff0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: lpm_dff0-SYN File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff0.vhd Line: 52
-    Info (12023): Found entity 1: lpm_dff0 File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff0.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_dff0-SYN File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff0.vhd Line: 52
+    Info (12023): Found entity 1: lpm_dff0 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff0.vhd Line: 42
 Info (12128): Elaborating entity "lpm_dff0" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1"
-Info (12128): Elaborating entity "lpm_ff" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff0.vhd Line: 80
-Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff0.vhd Line: 80
-Info (12133): Instantiated megafunction "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff0.vhd Line: 80
+Info (12128): Elaborating entity "lpm_ff" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff0.vhd Line: 80
+Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff0.vhd Line: 80
+Info (12133): Instantiated megafunction "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff0.vhd Line: 80
     Info (12134): Parameter "lpm_fftype" = "DFF"
     Info (12134): Parameter "lpm_type" = "LPM_FF"
     Info (12134): Parameter "lpm_width" = "1"
 Warning (12125): Using design file lpm_dff2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: lpm_dff2-SYN File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff2.vhd Line: 52
-    Info (12023): Found entity 1: lpm_dff2 File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff2.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_dff2-SYN File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff2.vhd Line: 52
+    Info (12023): Found entity 1: lpm_dff2 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff2.vhd Line: 42
 Info (12128): Elaborating entity "lpm_dff2" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4"
-Info (12128): Elaborating entity "lpm_ff" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff2.vhd Line: 74
-Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff2.vhd Line: 74
-Info (12133): Instantiated megafunction "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff2.vhd Line: 74
+Info (12128): Elaborating entity "lpm_ff" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff2.vhd Line: 74
+Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff2.vhd Line: 74
+Info (12133): Instantiated megafunction "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff2.vhd Line: 74
     Info (12134): Parameter "lpm_fftype" = "DFF"
     Info (12134): Parameter "lpm_type" = "LPM_FF"
     Info (12134): Parameter "lpm_width" = "4"
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_MOD:inst|VGA_SYNC:inst"
-Warning (10492): VHDL Process Statement warning at vga_sync.vhd(73): signal "Hcnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/DE0_CV/vga_sync.vhd Line: 73
-Warning (10492): VHDL Process Statement warning at vga_sync.vhd(73): signal "Vcnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/DE0_CV/vga_sync.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at vga_sync.vhd(73): signal "Hcnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/vga_sync.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at vga_sync.vhd(73): signal "Vcnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/vga_sync.vhd Line: 73
 Warning (12125): Using design file color_bridge.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: COLOR_BRIDGE-main File: C:/Users/11872028/Desktop/DE0_CV/color_bridge.vhd Line: 18
-    Info (12023): Found entity 1: COLOR_BRIDGE File: C:/Users/11872028/Desktop/DE0_CV/color_bridge.vhd Line: 6
+    Info (12022): Found design unit 1: COLOR_BRIDGE-main File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/color_bridge.vhd Line: 18
+    Info (12023): Found entity 1: COLOR_BRIDGE File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/color_bridge.vhd Line: 6
 Info (12128): Elaborating entity "COLOR_BRIDGE" for hierarchy "VGA_MOD:inst|COLOR_BRIDGE:inst1"
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "VGA_MOD:inst|BUSMUX:inst13"
 Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst13"
@@ -1368,15 +1368,15 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|BUSMUX:inst13" with the fo
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "VGA_MOD:inst|BUSMUX:inst13|lpm_mux:$00000" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12131): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst13|lpm_mux:$00000", which is child of megafunction instantiation "VGA_MOD:inst|BUSMUX:inst13" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_sjc.tdf
-    Info (12023): Found entity 1: mux_sjc File: C:/Users/11872028/Desktop/DE0_CV/db/mux_sjc.tdf Line: 23
+    Info (12023): Found entity 1: mux_sjc File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_sjc.tdf Line: 23
 Info (12128): Elaborating entity "mux_sjc" for hierarchy "VGA_MOD:inst|BUSMUX:inst13|lpm_mux:$00000|mux_sjc:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Warning (12125): Using design file lpm_ram_dq0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: lpm_ram_dq0-SYN File: C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq0.vhd Line: 54
-    Info (12023): Found entity 1: lpm_ram_dq0 File: C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq0.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_ram_dq0-SYN File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq0.vhd Line: 54
+    Info (12023): Found entity 1: lpm_ram_dq0 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq0.vhd Line: 42
 Info (12128): Elaborating entity "lpm_ram_dq0" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq0.vhd Line: 89
-Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq0.vhd Line: 89
-Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq0.vhd Line: 89
+Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq0.vhd Line: 89
+Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq0.vhd Line: 89
+Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq0.vhd Line: 89
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "video_mem1.mif"
@@ -1392,27 +1392,27 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncr
     Info (12134): Parameter "width_a" = "4"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_o1j1.tdf
-    Info (12023): Found entity 1: altsyncram_o1j1 File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_o1j1.tdf Line: 34
+    Info (12023): Found entity 1: altsyncram_o1j1 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_o1j1.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_o1j1" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dla.tdf
-    Info (12023): Found entity 1: decode_dla File: C:/Users/11872028/Desktop/DE0_CV/db/decode_dla.tdf Line: 23
-Info (12128): Elaborating entity "decode_dla" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|decode_dla:decode3" File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_o1j1.tdf Line: 45
+    Info (12023): Found entity 1: decode_dla File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_dla.tdf Line: 23
+Info (12128): Elaborating entity "decode_dla" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|decode_dla:decode3" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_o1j1.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_61a.tdf
-    Info (12023): Found entity 1: decode_61a File: C:/Users/11872028/Desktop/DE0_CV/db/decode_61a.tdf Line: 23
-Info (12128): Elaborating entity "decode_61a" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|decode_61a:rden_decode" File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_o1j1.tdf Line: 46
+    Info (12023): Found entity 1: decode_61a File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_61a.tdf Line: 23
+Info (12128): Elaborating entity "decode_61a" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|decode_61a:rden_decode" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_o1j1.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_pfb.tdf
-    Info (12023): Found entity 1: mux_pfb File: C:/Users/11872028/Desktop/DE0_CV/db/mux_pfb.tdf Line: 23
-Info (12128): Elaborating entity "mux_pfb" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|mux_pfb:mux2" File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_o1j1.tdf Line: 47
+    Info (12023): Found entity 1: mux_pfb File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_pfb.tdf Line: 23
+Info (12128): Elaborating entity "mux_pfb" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|mux_pfb:mux2" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_o1j1.tdf Line: 47
 Warning (12125): Using design file demux.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: DEMUX
 Info (12128): Elaborating entity "DEMUX" for hierarchy "VGA_MOD:inst|DEMUX:inst18"
 Warning (12125): Using design file fifo0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: fifo0-SYN File: C:/Users/11872028/Desktop/DE0_CV/fifo0.vhd Line: 56
-    Info (12023): Found entity 1: fifo0 File: C:/Users/11872028/Desktop/DE0_CV/fifo0.vhd Line: 42
+    Info (12022): Found design unit 1: fifo0-SYN File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/fifo0.vhd Line: 56
+    Info (12023): Found entity 1: fifo0 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/fifo0.vhd Line: 42
 Info (12128): Elaborating entity "fifo0" for hierarchy "VGA_MOD:inst|fifo0:inst7"
-Info (12128): Elaborating entity "scfifo" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" File: C:/Users/11872028/Desktop/DE0_CV/fifo0.vhd Line: 91
-Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" File: C:/Users/11872028/Desktop/DE0_CV/fifo0.vhd Line: 91
-Info (12133): Instantiated megafunction "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/fifo0.vhd Line: 91
+Info (12128): Elaborating entity "scfifo" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/fifo0.vhd Line: 91
+Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/fifo0.vhd Line: 91
+Info (12133): Instantiated megafunction "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/fifo0.vhd Line: 91
     Info (12134): Parameter "add_ram_output_register" = "ON"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
     Info (12134): Parameter "lpm_numwords" = "4096"
@@ -1424,27 +1424,27 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_
     Info (12134): Parameter "underflow_checking" = "ON"
     Info (12134): Parameter "use_eab" = "ON"
 Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_2491.tdf
-    Info (12023): Found entity 1: scfifo_2491 File: C:/Users/11872028/Desktop/DE0_CV/db/scfifo_2491.tdf Line: 25
+    Info (12023): Found entity 1: scfifo_2491 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/scfifo_2491.tdf Line: 25
 Info (12128): Elaborating entity "scfifo_2491" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/scfifo.tdf Line: 300
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_9a91.tdf
-    Info (12023): Found entity 1: a_dpfifo_9a91 File: C:/Users/11872028/Desktop/DE0_CV/db/a_dpfifo_9a91.tdf Line: 33
-Info (12128): Elaborating entity "a_dpfifo_9a91" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo" File: C:/Users/11872028/Desktop/DE0_CV/db/scfifo_2491.tdf Line: 36
+    Info (12023): Found entity 1: a_dpfifo_9a91 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/a_dpfifo_9a91.tdf Line: 33
+Info (12128): Elaborating entity "a_dpfifo_9a91" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/scfifo_2491.tdf Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fqn1.tdf
-    Info (12023): Found entity 1: altsyncram_fqn1 File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_fqn1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_fqn1" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|altsyncram_fqn1:FIFOram" File: C:/Users/11872028/Desktop/DE0_CV/db/a_dpfifo_9a91.tdf Line: 45
+    Info (12023): Found entity 1: altsyncram_fqn1 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_fqn1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_fqn1" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|altsyncram_fqn1:FIFOram" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/a_dpfifo_9a91.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_im8.tdf
-    Info (12023): Found entity 1: cmpr_im8 File: C:/Users/11872028/Desktop/DE0_CV/db/cmpr_im8.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_im8" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cmpr_im8:almost_full_comparer" File: C:/Users/11872028/Desktop/DE0_CV/db/a_dpfifo_9a91.tdf Line: 54
-Info (12128): Elaborating entity "cmpr_im8" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cmpr_im8:three_comparison" File: C:/Users/11872028/Desktop/DE0_CV/db/a_dpfifo_9a91.tdf Line: 55
+    Info (12023): Found entity 1: cmpr_im8 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/cmpr_im8.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_im8" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cmpr_im8:almost_full_comparer" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/a_dpfifo_9a91.tdf Line: 54
+Info (12128): Elaborating entity "cmpr_im8" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cmpr_im8:three_comparison" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/a_dpfifo_9a91.tdf Line: 55
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_vhb.tdf
-    Info (12023): Found entity 1: cntr_vhb File: C:/Users/11872028/Desktop/DE0_CV/db/cntr_vhb.tdf Line: 26
-Info (12128): Elaborating entity "cntr_vhb" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_vhb:rd_ptr_msb" File: C:/Users/11872028/Desktop/DE0_CV/db/a_dpfifo_9a91.tdf Line: 56
+    Info (12023): Found entity 1: cntr_vhb File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/cntr_vhb.tdf Line: 26
+Info (12128): Elaborating entity "cntr_vhb" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_vhb:rd_ptr_msb" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/a_dpfifo_9a91.tdf Line: 56
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ci7.tdf
-    Info (12023): Found entity 1: cntr_ci7 File: C:/Users/11872028/Desktop/DE0_CV/db/cntr_ci7.tdf Line: 26
-Info (12128): Elaborating entity "cntr_ci7" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_ci7:usedw_counter" File: C:/Users/11872028/Desktop/DE0_CV/db/a_dpfifo_9a91.tdf Line: 57
+    Info (12023): Found entity 1: cntr_ci7 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/cntr_ci7.tdf Line: 26
+Info (12128): Elaborating entity "cntr_ci7" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_ci7:usedw_counter" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/a_dpfifo_9a91.tdf Line: 57
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_0ib.tdf
-    Info (12023): Found entity 1: cntr_0ib File: C:/Users/11872028/Desktop/DE0_CV/db/cntr_0ib.tdf Line: 26
-Info (12128): Elaborating entity "cntr_0ib" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_0ib:wr_ptr" File: C:/Users/11872028/Desktop/DE0_CV/db/a_dpfifo_9a91.tdf Line: 58
+    Info (12023): Found entity 1: cntr_0ib File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/cntr_0ib.tdf Line: 26
+Info (12128): Elaborating entity "cntr_0ib" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_0ib:wr_ptr" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/a_dpfifo_9a91.tdf Line: 58
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "VGA_MOD:inst|BUSMUX:inst15"
 Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst15"
 Info (12133): Instantiated megafunction "VGA_MOD:inst|BUSMUX:inst15" with the following parameter:
@@ -1452,15 +1452,15 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|BUSMUX:inst15" with the fo
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "VGA_MOD:inst|BUSMUX:inst15|lpm_mux:$00000" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12131): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst15|lpm_mux:$00000", which is child of megafunction instantiation "VGA_MOD:inst|BUSMUX:inst15" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_flc.tdf
-    Info (12023): Found entity 1: mux_flc File: C:/Users/11872028/Desktop/DE0_CV/db/mux_flc.tdf Line: 23
+    Info (12023): Found entity 1: mux_flc File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_flc.tdf Line: 23
 Info (12128): Elaborating entity "mux_flc" for hierarchy "VGA_MOD:inst|BUSMUX:inst15|lpm_mux:$00000|mux_flc:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Warning (12125): Using design file lpm_ram_dq1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: lpm_ram_dq1-SYN File: C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq1.vhd Line: 54
-    Info (12023): Found entity 1: lpm_ram_dq1 File: C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq1.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_ram_dq1-SYN File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq1.vhd Line: 54
+    Info (12023): Found entity 1: lpm_ram_dq1 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq1.vhd Line: 42
 Info (12128): Elaborating entity "lpm_ram_dq1" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq1.vhd Line: 89
-Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq1.vhd Line: 89
-Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/lpm_ram_dq1.vhd Line: 89
+Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq1.vhd Line: 89
+Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq1.vhd Line: 89
+Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_ram_dq1.vhd Line: 89
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "video_mem2.mif"
@@ -1476,17 +1476,17 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncr
     Info (12134): Parameter "width_a" = "4"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_k1j1.tdf
-    Info (12023): Found entity 1: altsyncram_k1j1 File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_k1j1.tdf Line: 34
+    Info (12023): Found entity 1: altsyncram_k1j1 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_k1j1.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_k1j1" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_5la.tdf
-    Info (12023): Found entity 1: decode_5la File: C:/Users/11872028/Desktop/DE0_CV/db/decode_5la.tdf Line: 23
-Info (12128): Elaborating entity "decode_5la" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|decode_5la:decode3" File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_k1j1.tdf Line: 45
+    Info (12023): Found entity 1: decode_5la File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_5la.tdf Line: 23
+Info (12128): Elaborating entity "decode_5la" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|decode_5la:decode3" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_k1j1.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_u0a.tdf
-    Info (12023): Found entity 1: decode_u0a File: C:/Users/11872028/Desktop/DE0_CV/db/decode_u0a.tdf Line: 23
-Info (12128): Elaborating entity "decode_u0a" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|decode_u0a:rden_decode" File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_k1j1.tdf Line: 46
+    Info (12023): Found entity 1: decode_u0a File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_u0a.tdf Line: 23
+Info (12128): Elaborating entity "decode_u0a" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|decode_u0a:rden_decode" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_k1j1.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_hfb.tdf
-    Info (12023): Found entity 1: mux_hfb File: C:/Users/11872028/Desktop/DE0_CV/db/mux_hfb.tdf Line: 23
-Info (12128): Elaborating entity "mux_hfb" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|mux_hfb:mux2" File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_k1j1.tdf Line: 47
+    Info (12023): Found entity 1: mux_hfb File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_hfb.tdf Line: 23
+Info (12128): Elaborating entity "mux_hfb" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|mux_hfb:mux2" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_k1j1.tdf Line: 47
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "VGA_MOD:inst|BUSMUX:inst14"
 Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst14"
 Info (12133): Instantiated megafunction "VGA_MOD:inst|BUSMUX:inst14" with the following parameter:
@@ -1494,64 +1494,64 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|BUSMUX:inst14" with the fo
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "VGA_MOD:inst|BUSMUX:inst14|lpm_mux:$00000" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12131): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst14|lpm_mux:$00000", which is child of megafunction instantiation "VGA_MOD:inst|BUSMUX:inst14" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_dlc.tdf
-    Info (12023): Found entity 1: mux_dlc File: C:/Users/11872028/Desktop/DE0_CV/db/mux_dlc.tdf Line: 23
+    Info (12023): Found entity 1: mux_dlc File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_dlc.tdf Line: 23
 Info (12128): Elaborating entity "mux_dlc" for hierarchy "VGA_MOD:inst|BUSMUX:inst14|lpm_mux:$00000|mux_dlc:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Warning (12125): Using design file lpm_dff1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: lpm_dff1-SYN File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff1.vhd Line: 51
-    Info (12023): Found entity 1: lpm_dff1 File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff1.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_dff1-SYN File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff1.vhd Line: 51
+    Info (12023): Found entity 1: lpm_dff1 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff1.vhd Line: 42
 Info (12128): Elaborating entity "lpm_dff1" for hierarchy "lpm_dff1:inst1"
-Info (12128): Elaborating entity "lpm_ff" for hierarchy "lpm_dff1:inst1|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff1.vhd Line: 74
-Info (12130): Elaborated megafunction instantiation "lpm_dff1:inst1|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff1.vhd Line: 74
-Info (12133): Instantiated megafunction "lpm_dff1:inst1|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/lpm_dff1.vhd Line: 74
+Info (12128): Elaborating entity "lpm_ff" for hierarchy "lpm_dff1:inst1|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff1.vhd Line: 74
+Info (12130): Elaborated megafunction instantiation "lpm_dff1:inst1|lpm_ff:lpm_ff_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff1.vhd Line: 74
+Info (12133): Instantiated megafunction "lpm_dff1:inst1|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_dff1.vhd Line: 74
     Info (12134): Parameter "lpm_fftype" = "TFF"
     Info (12134): Parameter "lpm_type" = "LPM_FF"
     Info (12134): Parameter "lpm_width" = "1"
 Info (12128): Elaborating entity "TEXT_DRAWER" for hierarchy "TEXT_DRAWER:inst2"
 Info (12128): Elaborating entity "cpu" for hierarchy "cpu:inst12"
-Warning (10492): VHDL Process Statement warning at cpu.vhd(770): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 770
-Warning (10492): VHDL Process Statement warning at cpu.vhd(779): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 779
-Warning (10492): VHDL Process Statement warning at cpu.vhd(780): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 780
-Warning (10492): VHDL Process Statement warning at cpu.vhd(857): signal "result" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 857
-Warning (10631): VHDL Process Statement warning at cpu.vhd(759): inferring latch(es) for signal or variable "result", which holds its previous value in one or more paths through the process File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[0]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[1]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[2]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[3]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[4]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[5]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[6]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[7]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[8]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[9]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[10]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[11]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[12]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[13]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[14]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-Info (10041): Inferred latch for "result[15]" at cpu.vhd(759) File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
+Warning (10492): VHDL Process Statement warning at cpu.vhd(771): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 771
+Warning (10492): VHDL Process Statement warning at cpu.vhd(780): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 780
+Warning (10492): VHDL Process Statement warning at cpu.vhd(781): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 781
+Warning (10492): VHDL Process Statement warning at cpu.vhd(860): signal "result" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 860
+Warning (10631): VHDL Process Statement warning at cpu.vhd(760): inferring latch(es) for signal or variable "result", which holds its previous value in one or more paths through the process File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[0]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[1]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[2]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[3]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[4]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[5]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[6]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[7]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[8]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[9]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[10]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[11]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[12]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[13]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[14]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+Info (10041): Inferred latch for "result[15]" at cpu.vhd(760) File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
 Warning (12125): Using design file seletorclock.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: SeletorClock File: C:/Users/11872028/Desktop/DE0_CV/seletorclock.v Line: 1
+    Info (12023): Found entity 1: SeletorClock File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/seletorclock.v Line: 1
 Info (12128): Elaborating entity "SeletorClock" for hierarchy "SeletorClock:inst20"
 Warning (12125): Using design file clk_div.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: clk_div-a File: C:/Users/11872028/Desktop/DE0_CV/clk_div.vhd Line: 25
-    Info (12023): Found entity 1: clk_div File: C:/Users/11872028/Desktop/DE0_CV/clk_div.vhd Line: 6
+    Info (12022): Found design unit 1: clk_div-a File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/clk_div.vhd Line: 25
+    Info (12023): Found entity 1: clk_div File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/clk_div.vhd Line: 6
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst25"
 Warning (12125): Using design file debounce.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: debounce-a File: C:/Users/11872028/Desktop/DE0_CV/debounce.vhd Line: 10
-    Info (12023): Found entity 1: debounce File: C:/Users/11872028/Desktop/DE0_CV/debounce.vhd Line: 5
+    Info (12022): Found design unit 1: debounce-a File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/debounce.vhd Line: 10
+    Info (12023): Found entity 1: debounce File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/debounce.vhd Line: 5
 Info (12128): Elaborating entity "debounce" for hierarchy "debounce:inst23"
 Warning (12125): Using design file dec_keyboard.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: dec_keyboard-a File: C:/Users/11872028/Desktop/DE0_CV/dec_keyboard.vhd Line: 18
-    Info (12023): Found entity 1: dec_keyboard File: C:/Users/11872028/Desktop/DE0_CV/dec_keyboard.vhd Line: 6
+    Info (12022): Found design unit 1: dec_keyboard-a File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/dec_keyboard.vhd Line: 18
+    Info (12023): Found entity 1: dec_keyboard File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/dec_keyboard.vhd Line: 6
 Info (12128): Elaborating entity "dec_keyboard" for hierarchy "dec_keyboard:inst11"
 Warning (12125): Using design file keyboard.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: keyboard-a File: C:/Users/11872028/Desktop/DE0_CV/keyboard.vhd Line: 13
-    Info (12023): Found entity 1: keyboard File: C:/Users/11872028/Desktop/DE0_CV/keyboard.vhd Line: 6
+    Info (12022): Found design unit 1: keyboard-a File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/keyboard.vhd Line: 13
+    Info (12023): Found entity 1: keyboard File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/keyboard.vhd Line: 6
 Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:inst14"
 Info (12128): Elaborating entity "RAM" for hierarchy "RAM:inst10"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM:inst10|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/DE0_CV/RAM.vhd Line: 89
-Info (12130): Elaborated megafunction instantiation "RAM:inst10|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/DE0_CV/RAM.vhd Line: 89
-Info (12133): Instantiated megafunction "RAM:inst10|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/RAM.vhd Line: 89
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM:inst10|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/RAM.vhd Line: 89
+Info (12130): Elaborated megafunction instantiation "RAM:inst10|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/RAM.vhd Line: 89
+Info (12133): Instantiated megafunction "RAM:inst10|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/RAM.vhd Line: 89
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "cpuram.mif"
@@ -1567,22 +1567,22 @@ Info (12133): Instantiated megafunction "RAM:inst10|altsyncram:altsyncram_compon
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_doi1.tdf
-    Info (12023): Found entity 1: altsyncram_doi1 File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_doi1.tdf Line: 34
+    Info (12023): Found entity 1: altsyncram_doi1 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_doi1.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_doi1" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_8la.tdf
-    Info (12023): Found entity 1: decode_8la File: C:/Users/11872028/Desktop/DE0_CV/db/decode_8la.tdf Line: 23
-Info (12128): Elaborating entity "decode_8la" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|decode_8la:decode3" File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_doi1.tdf Line: 45
+    Info (12023): Found entity 1: decode_8la File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_8la.tdf Line: 23
+Info (12128): Elaborating entity "decode_8la" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|decode_8la:decode3" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_doi1.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_11a.tdf
-    Info (12023): Found entity 1: decode_11a File: C:/Users/11872028/Desktop/DE0_CV/db/decode_11a.tdf Line: 23
-Info (12128): Elaborating entity "decode_11a" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|decode_11a:rden_decode" File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_doi1.tdf Line: 46
+    Info (12023): Found entity 1: decode_11a File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/decode_11a.tdf Line: 23
+Info (12128): Elaborating entity "decode_11a" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|decode_11a:rden_decode" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_doi1.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_7hb.tdf
-    Info (12023): Found entity 1: mux_7hb File: C:/Users/11872028/Desktop/DE0_CV/db/mux_7hb.tdf Line: 23
-Info (12128): Elaborating entity "mux_7hb" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|mux_7hb:mux2" File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_doi1.tdf Line: 47
+    Info (12023): Found entity 1: mux_7hb File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/mux_7hb.tdf Line: 23
+Info (12128): Elaborating entity "mux_7hb" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|mux_7hb:mux2" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_doi1.tdf Line: 47
 Info (12128): Elaborating entity "ASCII_CONV" for hierarchy "ASCII_CONV:inst4"
 Info (12128): Elaborating entity "lpm_rom0" for hierarchy "lpm_rom0:inst3"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "lpm_rom0:inst3|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_rom0.vhd Line: 84
-Info (12130): Elaborated megafunction instantiation "lpm_rom0:inst3|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/DE0_CV/lpm_rom0.vhd Line: 84
-Info (12133): Instantiated megafunction "lpm_rom0:inst3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/lpm_rom0.vhd Line: 84
+Info (12128): Elaborating entity "altsyncram" for hierarchy "lpm_rom0:inst3|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_rom0.vhd Line: 84
+Info (12130): Elaborated megafunction instantiation "lpm_rom0:inst3|altsyncram:altsyncram_component" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_rom0.vhd Line: 84
+Info (12133): Instantiated megafunction "lpm_rom0:inst3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/lpm_rom0.vhd Line: 84
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "charmap.mif"
@@ -1597,108 +1597,108 @@ Info (12133): Instantiated megafunction "lpm_rom0:inst3|altsyncram:altsyncram_co
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7kd1.tdf
-    Info (12023): Found entity 1: altsyncram_7kd1 File: C:/Users/11872028/Desktop/DE0_CV/db/altsyncram_7kd1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_7kd1 File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/altsyncram_7kd1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_7kd1" for hierarchy "lpm_rom0:inst3|altsyncram:altsyncram_component|altsyncram_7kd1:auto_generated" File: c:/intelfpga_lite/21.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "POS_CONV" for hierarchy "POS_CONV:inst13"
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer inst5~0
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Mod0" File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 816
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Div0" File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 808
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "POS_CONV:inst13|Mod0" File: C:/Users/11872028/Desktop/DE0_CV/POS_CONV.vhd Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "POS_CONV:inst13|Div0" File: C:/Users/11872028/Desktop/DE0_CV/POS_CONV.vhd Line: 28
-Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Mod0" File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 816
-Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Mod0" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 816
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Mod0" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 817
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Div0" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 809
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "POS_CONV:inst13|Mod0" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/POS_CONV.vhd Line: 27
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "POS_CONV:inst13|Div0" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/POS_CONV.vhd Line: 28
+Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Mod0" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 817
+Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Mod0" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 817
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_a5m.tdf
-    Info (12023): Found entity 1: lpm_divide_a5m File: C:/Users/11872028/Desktop/DE0_CV/db/lpm_divide_a5m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_a5m File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/lpm_divide_a5m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dnh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_dnh File: C:/Users/11872028/Desktop/DE0_CV/db/sign_div_unsign_dnh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_dnh File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/sign_div_unsign_dnh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_03f.tdf
-    Info (12023): Found entity 1: alt_u_div_03f File: C:/Users/11872028/Desktop/DE0_CV/db/alt_u_div_03f.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Div0" File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 808
-Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Div0" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 808
+    Info (12023): Found entity 1: alt_u_div_03f File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/alt_u_div_03f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Div0" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 809
+Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Div0" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 809
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_7dm.tdf
-    Info (12023): Found entity 1: lpm_divide_7dm File: C:/Users/11872028/Desktop/DE0_CV/db/lpm_divide_7dm.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "POS_CONV:inst13|lpm_divide:Mod0" File: C:/Users/11872028/Desktop/DE0_CV/POS_CONV.vhd Line: 27
-Info (12133): Instantiated megafunction "POS_CONV:inst13|lpm_divide:Mod0" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/POS_CONV.vhd Line: 27
+    Info (12023): Found entity 1: lpm_divide_7dm File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/lpm_divide_7dm.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "POS_CONV:inst13|lpm_divide:Mod0" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/POS_CONV.vhd Line: 27
+Info (12133): Instantiated megafunction "POS_CONV:inst13|lpm_divide:Mod0" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/POS_CONV.vhd Line: 27
     Info (12134): Parameter "LPM_WIDTHN" = "11"
     Info (12134): Parameter "LPM_WIDTHD" = "11"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_05m.tdf
-    Info (12023): Found entity 1: lpm_divide_05m File: C:/Users/11872028/Desktop/DE0_CV/db/lpm_divide_05m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_05m File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/lpm_divide_05m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_3nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_3nh File: C:/Users/11872028/Desktop/DE0_CV/db/sign_div_unsign_3nh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_3nh File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/sign_div_unsign_3nh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_c2f.tdf
-    Info (12023): Found entity 1: alt_u_div_c2f File: C:/Users/11872028/Desktop/DE0_CV/db/alt_u_div_c2f.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "POS_CONV:inst13|lpm_divide:Div0" File: C:/Users/11872028/Desktop/DE0_CV/POS_CONV.vhd Line: 28
-Info (12133): Instantiated megafunction "POS_CONV:inst13|lpm_divide:Div0" with the following parameter: File: C:/Users/11872028/Desktop/DE0_CV/POS_CONV.vhd Line: 28
+    Info (12023): Found entity 1: alt_u_div_c2f File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/alt_u_div_c2f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "POS_CONV:inst13|lpm_divide:Div0" File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/POS_CONV.vhd Line: 28
+Info (12133): Instantiated megafunction "POS_CONV:inst13|lpm_divide:Div0" with the following parameter: File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/POS_CONV.vhd Line: 28
     Info (12134): Parameter "LPM_WIDTHN" = "11"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
-    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/11872028/Desktop/DE0_CV/db/lpm_divide_hbm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/lpm_divide_hbm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/11872028/Desktop/DE0_CV/db/sign_div_unsign_nlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/sign_div_unsign_nlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
-    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/11872028/Desktop/DE0_CV/db/alt_u_div_kve.tdf Line: 23
-Warning (13012): Latch cpu:inst12|result[14] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[13] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[10] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[9] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[8] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[7] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[6] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[5] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[4] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[3] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[1] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[2] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[0] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[11] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[12] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[15] has unsafe behavior File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 759
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/DE0_CV/cpu.vhd Line: 160
+    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/db/alt_u_div_kve.tdf Line: 23
+Warning (13012): Latch cpu:inst12|result[14] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[13] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[10] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[9] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[8] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[7] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[6] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[5] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[4] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[3] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[1] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[2] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[0] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[11] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[12] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
+Warning (13012): Latch cpu:inst12|result[15] has unsafe behavior File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 760
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/DE0_CV/DE0_CV/cpu.vhd Line: 161
 Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[7]"
-Info (21057): Implemented 3045 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3058 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 2881 logic cells
+    Info (21061): Implemented 2894 logic cells
     Info (21064): Implemented 133 RAM segments
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 4940 megabytes
-    Info: Processing ended: Tue Jul 11 17:25:48 2023
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 4956 megabytes
+    Info: Processing ended: Thu Jul 13 18:02:20 2023
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:31
 
 

@@ -72,6 +72,7 @@ ARCHITECTURE main of cpu is
 	-- LOGIC Instructions (All should begin wiht "01"):	
 	CONSTANT LAND			: STD_LOGIC_VECTOR(3 downto 0) := "0010"; 	-- AND RX RY RZ  	-- RZ <- RX AND RY	Format: < inst(6) | RX(3) | RY(3) | RZ(3)| x >
 	CONSTANT LOR			: STD_LOGIC_VECTOR(3 downto 0) := "0011";		-- OR RX RY RZ   	-- RZ <- RX OR RY		Format: < inst(6) | RX(3) | RY(3) | RZ(3)| x >
+	CONSTANT LNOR			: STD_LOGIC_VECTOR(3 downto 0) := "0001"; 	-- NOR RX RY RZ  	-- RZ <- RX NOR RY	Format: < inst(6) | RX(3) | RY(3) | RZ(3)| x >
 	CONSTANT LXOR			: STD_LOGIC_VECTOR(3 downto 0) := "0100"; 	-- XOR RX RY RZ  	-- RZ <- RX XOR RY	Format: < inst(6) | RX(3) | RY(3) | RZ(3)| x >
 	CONSTANT LNOT			: STD_LOGIC_VECTOR(3 downto 0) := "0101";		-- NOT RX RY       	-- RX <- NOT(RY)		Format: < inst(6) | RX(3) | RY(3) | xxxx >
 	CONSTANT SHIFT			: STD_LOGIC_VECTOR(3 downto 0) := "0000";		-- SHIFTL0 RX,n / SHIFTL1 RX,n / SHIFTR0 RX,n / SHIFTR1 RX,n / ROTL RX,n / ROTR RX,n
@@ -848,6 +849,8 @@ BEGIN
 					WHEN LXOR => result <= x xor y;
 
 					WHEN LOR =>	 result <= x or y;
+					
+					WHEN LNOR => result <= x nor y;
 
 					WHEN LNOT => result <= not x;
 

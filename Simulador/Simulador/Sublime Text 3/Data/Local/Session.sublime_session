@@ -28,10 +28,10 @@
 			"buffers":
 			[
 				{
-					"file": "/C/Users/11872028/Desktop/Simulador/final.asm",
+					"file": "/C/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/Simulador/Simulador/final.asm",
 					"settings":
 					{
-						"buffer_size": 15092,
+						"buffer_size": 15884,
 						"line_ending": "Unix"
 					}
 				}
@@ -133,19 +133,19 @@
 					[
 						{
 							"buffer": 0,
-							"file": "/C/Users/11872028/Desktop/Simulador/final.asm",
+							"file": "/C/Users/11872028/Desktop/SSC0119-Pratica-em-Organizacao-de-Computadores-master/Simulador/Simulador/final.asm",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 15092,
+								"buffer_size": 15884,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										120,
-										120
+										15630,
+										15630
 									]
 								],
 								"settings":
@@ -155,7 +155,7 @@
 									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
-								"translation.y": 0.0,
+								"translation.y": 15236.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
@@ -203,7 +203,7 @@
 			{
 				"height": 0.0
 			},
-			"position": "0,0,1,-1,-1,-1,-1,646,31,107,687",
+			"position": "0,2,3,-1,-1,-1,-1,646,31,107,687",
 			"project": "",
 			"replace":
 			{
