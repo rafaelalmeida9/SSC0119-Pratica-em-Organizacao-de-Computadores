@@ -10,7 +10,7 @@ A nova instrução inserida no jogo foi a NOR, cujo código pode ser encontrado 
 
 Tabela verdade:
 
-| $E_1$ | $E_2$ | S   |
+| $E_1$ | $E_2$ | $S$ |
 | ----- | ----- | --- |
 | 0     | 0     | 1   |
 | 0     | 1     | 0   |
